@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0px;
+        }
+        #contaner{
+            width:100%;
+            margin-top: 5%;
+            /* border:3px solid red; */
+            display: flex;
+            
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+        #contaner>div{
+            width:45%;
+            /* height: 500px; */
+            margin-top: 5%;
+            /* border:1px solid green; */
+            
+        }
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .class>div{
+            width:100%;
+            /* height: 400px; */
+            /* border:1px solid blue; */
+            display: flex;
+            margin: auto;
+            /* border-radius: 10px; */
+            margin-top: 5%;
+        }
+
+        #small{
+            width:100%;
+            height: 70px;
+            /* border: 2px solid black; */
+            /* display: flex; */
+            justify-content: space-around;
+            margin: auto;
+            margin-top: 2%;
+        }
+        #small>div{
+            display: flex;
+            width:50px;
+            height: 50px;
+            /* border: 1px solid red; */
+            margin: auto;
+            cursor: pointer;
+            
+
+        }
+        #small+div{
+            width:80%;
+
+            /* border:1px solid red; */
+            /* height: 200px; */
+            display: grid;
+            gap: 8px;
+           margin-top: 10%;
+            background-color: #dd72a3;
+            border-radius: 10px;
+            padding: 20px 40px;
+        }
+        #small+div>p:nth-child(1){
+            color: white;
+            font-style: italic;
+            
+        }
+        #small+div>p:nth-child(2){
+            color: white;
+            
+            
+        }
+        #small+div>p:nth-child(3){
+            color: white;
+            
+            
+        }
+        #small+div>p:nth-child(4){
+            color: white;
+            
+        }
+        #small+div>p:nth-child(5){
+            color: white;
+            
+        }
+        #small+div>p:nth-child(6){
+            color: white;
+            
+        }
+        #small+div>p:nth-child(7){
+            color: white;
+            
+        }
+        
+    </style>
+    <style>
+     
+        #second>div{
+            width:80%;
+            padding: 10px;
+        }
+        #second h3{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+        }
+       
+        #Rs{
+            display:flex;
+            margin-top: 10px;
+        }
+
+        #Rs>h3:nth-child(1){
+            text-decoration: line-through;
+        }
+        #Rs>h3:nth-child(2){
+            margin-left: 10px;
+            color: red;
+        }
+        p{
+            font-size: smaller;
+        }
+        #ml{
+            width:80%;
+            height: 40px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 1px;
+            cursor: pointer;
+        }
+        #ml+button{
+            width:80%;
+            height: 30px;
+            color: white;
+            background-color:#50504b;
+            border:0px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        button+p{
+            font-size: 30px;
+            margin-left: 40%;
+        }
+        button+p+p{
+            /* text-align: center; */
+            margin-top: 20px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            margin-left: 5%;
+        }
+        button+p+P+h1{
+            margin-top: 20px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            margin-left: 5%;
+        }
+        #sun{
+            margin-top: 20px;
+            display: flex;
+            /* border: 2px solid gray; */
+            justify-content: space-evenly;
+            /* justify-content: center; */
+            align-items: center;
+            /* height: 20px; */
+        }
+        #sun>div{
+            width:10%;
+            /* height: 20px; */
+            /* border: 1px solid green; */
+        }
+        #sun>div>p{
+            margin-top: 10px;
+            text-align: center;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+        }
+        #sun>div>img{
+            width:100%;
+        }
+
+    </style>
+
+    <style>
+        #contaner1>h1{
+            text-align: center;
+            margin-top: 40px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25px;
+            font-weight: 400;
+        }
+        #contaner1>h1+img{
+            width:100%;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contaner">
+           <div class="class">
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/ROSELOTION_720x.jpg?v=1655303248" alt="img">
+                </div>
+                <div id="small">
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/ROSELOTION_720x.jpg?v=1655303248" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-5_1_9e39328e-9390-4fab-b1c8-9a33b778c3c5_720x.jpg?v=1655303248" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-4_16463eb2-7c5f-4f69-85ff-13e94417d461_720x.jpg?v=1655303248" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-3_1_81c8c36d-146a-44d9-a88f-43a22307d808_720x.jpg?v=1655303248" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_1_3d9de712-097e-48f5-a95e-c4844d96cddd_720x.jpg?v=1655303248" alt="img">
+                    </div>
+                    <!-- <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_3_360x.jpg?v=1646477249" alt="img"></div>-->
+                </div>
+                <div>
+                    <p>PERKS TO LOVE</p>
+
+                    <p>BUY 2 GET 2 MINIS FREE</p>
+                    
+                    <p>New Launch: Cica Calming Niacinamide Sunscreen SPF50 PA+++</p>
+                    
+                    <p>New Launch: 20% Vitamin C Face Serum</p>
+                    
+                    <p>Upto 20% off Sitewide</p>
+                    
+                    <p>Additional 3% Off on Prepaid Orders</p>
+                    
+                    <p>Earn 10% Cashback on all orders.</p>
+                </div>
+           </div>
+           <div id="second">
+            <div>
+                <h3>Hydrating Body Lotion with Hyaluronic Acid & Rose</h3>
+                <div id="Rs">
+                    <h3>
+                        Rs: 595.00
+                    </h3>
+                    <h3>
+                        Rs: 387.00
+                    </h3>
+                </div>
+                <p>
+                    Inclusive of All Taxes
+                </p>
+                <select id="ml">
+                    <option value="">300 ml</option>
+                </select>
+                <button>Add To Card</button>
+                <p>&#9825;</p>
+                <p>With nourishing Damask Rose oil, lavender & hyaluronic acid, this body serum lotion spreads evenly for hydrated, soft & dewy glowing skin.</p>
+                <h1>Feel the Love</h1>
+                <div id="sun">
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Hydrates_Skin.png?v=1636459852" alt="img">
+                        <p>Hydrates</p>
+                        <p>Skin</p>
+                    </div>
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Reduces_Dark_Spots.png?v=1636459850" alt="img">
+                        <p>Reduces</p>
+                        <p>Dark Spots</p>
+                    </div>
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Fades_Fine_Lines_Wrinkles.png?v=1636459850" alt="img">
+                        <p>Fades Fine</p>
+                        <p>Lines</p>
+                    </div>
+
+                </div>
+            </div>
+           </div>
+          
+    </div>
+
+    <div id="contaner1">
+        <h1>Made With Love</h1>
+        <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/5-Lemon-Scrub.png?v=1636540848" alt="img">
+        <h1>Slather not Slurp</h1>
+        <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Artboard_1-5_7.jpg?v=1636540317" alt="img">
+
+    </div>
+</body>
+</html>
