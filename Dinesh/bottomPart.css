@@ -1,0 +1,77 @@
+#facebook>svg{
+    width: 20px;
+    height: 20px;
+    }
+    #instagram>svg{
+    width: 20px;
+    height: 20px;
+    }
+    #youtube>svg{
+    width: 20px;
+    height: 20px;
+    }
+
+    #footer{
+        display: grid;
+       grid-template-columns: repeat(3,1fr);
+       grid-template-rows: 1;
+       gap: 0px;
+       padding-top: 50px;
+       padding-right: 50px;
+       padding-left: 50px;
+       
+        
+    }
+    #footer>div{
+        
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+    }
+    #followUs{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #footer>div>p{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+    }
+
+    #footer>div>a{
+       text-decoration: none;
+       font-family: 'Roboto', sans-serif;
+       cursor: pointer;
+      
+       margin-top: 5px;
+       color: rgb(59, 50, 50);
+       font-size: 16px;
+       letter-spacing: 2px;
+
+    }
+
+    #footer>div button{
+       
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+    }
+    #footer>div input{
+        background-color: transparent;
+        border-color: transparent;
+        border-bottom: 2px solid black;
+        margin-right: 10px;
+        height: 100%;
+    }
+   #footer #year{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: lighter;
+
+    }
