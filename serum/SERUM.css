@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+#top>img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+h1{
+text-align: center;
+font-size: 45px;
+color: #3C3C3C;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+ #middle{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto;
+    gap:40px 30px;
+    width: 90%;
+    margin: auto;
+ }
+
+ #middle>div>img{
+    width: 100%;
+ }
+ img+p{
+    text-align: center;
+    font-size: 14px;
+    color:rgb(24, 22, 22);
+    font-weight: 500;
+    margin-top: 30px;
+ }
+ #pricediv{
+    display:flex;
+    gap:4px;
+    justify-content: center;
+    font-size: 11px;
+    margin-bottom: 15px;
+
+ }
+ p+p{
+    text-align: center;
+    color: red;
+ }
+#middle>div>button{
+    display: block;
+    margin: auto;
+    width: 95%;
+    padding:8px  ;
+    background-color:gray ;
+    border: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight:600
+ }
+ .para{
+    height: 80px;
+ }
+ @media all and (min-width:700px) and (max-width:1024px)  {
+   #middle{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows:auto;
+      gap:40px 30px;
+      /* width: 90%; */
+      margin: auto;
+   }
+ }
+ @media all and (min-width:400px) and (max-width:699px)  {
+   #middle{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows:auto;
+      gap:40px 30px;
+      /* width: 90%; */
+      margin: auto;
+   }
+ }
+ 
