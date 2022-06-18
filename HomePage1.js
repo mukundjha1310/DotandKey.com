@@ -806,3 +806,39 @@ guideButtons[1].addEventListener("click", function () {
   }
   guideCard3_Img.src = guideImgArray3[guideCardPlace3];
 });
+
+
+
+
+
+  //Adding Products to the cartData key of loacl storage
+  let addToCartBtn=document.querySelectorAll(".addToCart");
+    let items=[];
+    for(let i=0; i<addToCartBtn.length; i++) {
+    addToCartBtn[i].addEventListener("click",function(event){ 
+        let item = {
+          id: "index"+(i+1),
+          image:event.target.parentElement.children[0].src,
+          name: event.target.parentElement.children[2].innerText,
+          price: event.target.parentElement.children[3].children[1].innerText,
+          quantity:1
+        }
+        if(JSON.parse(localStorage.getItem("cartData"))===null) {
+            items.push(item);
+            localStorage.setItem("cartData", JSON.stringify(items));
+            window.location.reload();
+        } else {
+            let localItems=JSON.parse(localStorage.getItem("cartData"));
+            localItems.map(data=> {
+              if(item.id===data.id) {
+                item.quantity=data.quantity+1;
+              } else {
+                items.push(data);
+              }
+            });
+        items.push(item);
+        localStorage.setItem("cartData", JSON.stringify(items)); 
+        window.location.reload();      
+        }
+       });
+    }

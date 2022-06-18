@@ -314,4 +314,40 @@
     Card.append(img, iconsdiv, name, price, Btn);
     container.append(Card);
   });
+
+
+
+   //Adding Products to the cartData key of loacl storage
+   let addToCartBtn=document.querySelectorAll(".addToCart");
+    let items=[];
+    for(let i=0; i<addToCartBtn.length; i++) {
+    addToCartBtn[i].addEventListener("click",function(event){ 
+      console.log(event.target.parentElement);
+      console.log(event.target.parentElement.children[3].children[1].innerText.replace(/[A-Za-z:]/g, ""));
+        let item = {
+          id: "BirthdaySale"+(i+1),
+          image:event.target.parentElement.children[0].src,
+          name: event.target.parentElement.children[2].innerText,
+          price: event.target.parentElement.children[3].children[1].innerText.replace(/[A-Za-z:]/g, ""),
+          quantity:1
+        }
+        if(JSON.parse(localStorage.getItem("cartData"))===null) {
+            items.push(item);
+            localStorage.setItem("cartData", JSON.stringify(items));
+            window.location.reload();
+        } else {
+            let localItems=JSON.parse(localStorage.getItem("cartData"));
+            localItems.map(data=> {
+              if(item.id===data.id) {
+                item.quantity=data.quantity+1;
+              } else {
+                items.push(data);
+              }
+            });
+        items.push(item);
+        localStorage.setItem("cartData", JSON.stringify(items)); 
+        window.location.reload();      
+        }
+        });
+    }
 </script>

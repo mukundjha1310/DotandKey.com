@@ -145,7 +145,7 @@
     for(let i=0; i<addToCartBtn.length; i++) {
     addToCartBtn[i].addEventListener("click",function(event){ 
         let item = {
-          id: i+1,
+          id: "Moisturizer"+(i+1),
           image:event.target.parentElement.children[0].src,
           name: event.target.parentElement.children[8].innerText,
           price: event.target.parentElement.children[10].children[0].innerText,
