@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <style>
+      div {
+        width: 30%;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        padding: 50px 0px 50px 0px;
+      }
+      label {
+        color: rgb(60, 60, 60);
+
+        font-size: 14px;
+        font-family: Montserrat, sans-serif;
+        line-height: 19.6001px;
+        vertical-align: baseline;
+        letter-spacing: 2.80001px;
+        word-spacing: 0px;
+        margin: 0px 0px 10px;
+        padding: 0px;
+        font-weight: 700;
+      }
+
+      input {
+        width: 100%;
+
+        margin-bottom: 30px;
+        font-size: 18px;
+        text-align: left;
+        border: 1px solid silver;
+        margin-top: 19px;
+        line-height: 34.2px;
+        vertical-align: baseline;
+        letter-spacing: 0.9px;
+      }
+      h1 {
+        font-weight: bold;
+        text-align: center;
+        font-family: Ubuntu, sans-serif;
+        font-size: 27px;
+        color: rgb(60, 60, 60);
+        font-weight: 700;
+        margin-bottom: 50px;
+      }
+      #btn {
+        width: 100%;
+        height: 10%;
+        font-weight: 400;
+        background-color: rgb(60, 60, 60);
+        border: transparent;
+        color: white;
+        font-size: 19px;
+        padding: 10px 150px 10px 150px;
+      }
+      p,
+      a {
+        font-family: Montserrat, sans-serif;
+        line-height: 34.2px;
+        vertical-align: baseline;
+        letter-spacing: 0.9px;
+        margin: auto;
+        text-align: left;
+        text-decoration: none;
+        font-size: 18px;
+        color: rgb(60, 60, 60);
+      }
+      #error > input {
+        background-color: rgb(255, 246, 246);
+        border: 1px solid red;
+        color: red;
+      }
+      form > div {
+        border: 1px solid red;
+        height: 19%;
+        width: 100%;
+        margin-right: 90px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #facebook,
+      #google {
+        display: flex;
+        justify-content: space-between;
+
+        background-color: rgb(20, 121, 189);
+        height: 1px;
+        width: 100%;
+        padding: 20px 0px 30px 0px;
+        margin-bottom: 10px;
+      }
+      #google {
+        background-color: rgb(221, 75, 57);
+        margin-bottom: 50px;
+      }
+      #facebook > img {
+        height: 40px;
+
+        width: 30px;
+        border: 1px solid rgb(20, 121, 189);
+      }
+      #facebook > a > p {
+        color: white;
+        text-align: right;
+      }
+      #google > img {
+        height: 40px;
+
+        width: 30px;
+      }
+      #google > a > p {
+        color: white;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Login</h1>
+      <div id="facebook">
+        <img src="facebook.jpg" alt="" />
+        <a
+          href="https://www.facebook.com/login.php?skip_api_login=1&api_key=1667514393504118&kid_directed_site=0&app_id=1667514393504118&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fscope%3Demail%26state%3D13453-3342cdb0425e4505b9ea628a9d84d55f%26redirect_uri%3Dhttps%253A%252F%252Foneclicksociallogin.devcloudsoftware.com%252Fuser%252Ffacebookloginnotifier%252F%26client_id%3D1667514393504118%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D71452a8e-360d-4ab2-ab5e-781d1d6ab246%26tp%3Dunspecified&cancel_url=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Ffacebookloginnotifier%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D13453-3342cdb0425e4505b9ea628a9d84d55f%23_%3D_&display=page&locale=en_GB&pl_dbl=0"
+        >
+          <p>Facebook login</p></a
+        >
+      </div>
+      <div id="google">
+        <img src="google.png" alt="" />
+        <a
+          href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=13453-2eddc258feaa4951a8b00e57a352d6cd&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Fgoogleloginnotifier%2F&client_id=1003899641045-oa1oblo54ae2lh2qb2in254k1dgghs1g.apps.googleusercontent.com&response_type=code&include_granted_scopes=true&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&prompt=select_account&access_type=online&flowName=GeneralOAuthFlow"
+        >
+          <p>Google login</p></a
+        >
+      </div>
+
+      <form>
+        <p id="error"></p>
+
+        <label for="email">EMAIL</label><br />
+        <input id="mail" type="text" /><br />
+        <label for="pass">PASSWORD</label><br />
+
+        <input id="pass" type="text" /><br />
+        <input id="btn" type="submit" value="Sign in" /><br />
+        <p><a href="signup.html">Don't have an account? Sign up here.</a></p>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit", loginactionfun);
+
+  let signdata = JSON.parse(localStorage.getItem("signupdata")) || [];
+  let login_data = JSON.parse(localStorage.getItem("login-data")) || [];
+  function loginactionfun() {
+    event.preventDefault();
+
+    document.querySelector("#error").innerHTML = "";
+    let count = 0;
+    let EEmail = document.querySelector("#mail").value;
+    let PPaas = document.querySelector("#pass").value;
+    for (let i = 0; i < signdata.length; i++) {
+      if (signdata[i].Email == EEmail && signdata[i].Password == PPaas) {
+        count++;
+        login_data.push(signdata[i]);
+        localStorage.setItem("login-data", JSON.stringify(login_data));
+      }
+    }
+
+    if (count > 0) {
+      window.location.href = "index.html";
+    } else {
+      let err = document.createElement("input");
+      console.log(signdata.length);
+      err.value = "  *  Incorrect email or password";
+      document.querySelector("#error").append(err);
+    }
+  }
+</script>

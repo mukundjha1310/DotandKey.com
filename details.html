@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login details</title>
+    <style>
+      #container {
+        width: 90%;
+        margin: auto;
+        margin-top: 7%;
+      }
+      #content {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 3%;
+      }
+      h1,
+      h1 + p {
+        text-align: center;
+        margin-top: 3%;
+      }
+      h1 + p > a {
+        color: rgb(60, 60, 60);
+        text-decoration: none;
+        font-size: 18px;
+        text-align: center;
+      }
+      h1 + p:hover {
+        text-decoration: underline;
+      }
+
+      #container > div > div {
+        width: 30%;
+      }
+      #container {
+        font-family: Ubuntu, sans-serif;
+        color: rgb(60, 60, 60);
+      }
+      h4 + p {
+        padding-top: 10px;
+      }
+      h4 + p + p {
+        padding-bottom: 10px;
+      }
+      #content p {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>My account</h1>
+      <p onclick="logoutfun()"><a href="login.html">Log out</a></p>
+      <div id="content">
+        <div>
+          <h2>Order History</h2>
+          <p>You haven't placed any orders yet.</p>
+        </div>
+        <div>
+          <h3>Account details</h3>
+          <h4 id="nameh4"></h4>
+          <p id="namep"></p>
+          <p>india</p>
+          <p>View address</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let showdata = JSON.parse(localStorage.getItem("login-data")) || [];
+
+  document.querySelector("#nameh4").innerText =
+    showdata[0].fName + " " + showdata[0].lName;
+  document.querySelector("#namep").innerText =
+    showdata[0].fName + " " + showdata[0].lName;
+
+  //****************log out section**********************8
+
+  function logoutfun() {
+    showdata.splice(0, 1);
+    localStorage.setItem("login-data", JSON.stringify(showdata));
+  }
+</script>

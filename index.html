@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 50px;
+        height: 50px;
+        margin: 5% 0% 0% 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      onclick="dosomething()"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTezVZRoHiOL2h1sfPm3xB_MY_sKqFAcopRqQ&usqp=CAU"
+      alt=""
+    />
+  </body>
+</html>
+<script>
+  function dosomething() {
+    let len = JSON.parse(localStorage.getItem("login-data")) || [];
+    if (len.length > 0) {
+      window.location.href = "details.html";
+    } else {
+      window.location.href = "login.html";
+    }
+  }
+</script>
