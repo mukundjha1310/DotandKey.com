@@ -1,3 +1,20 @@
+let ProductTypes = document.querySelectorAll("#prodType>div");
+for (let i = 0; i < ProductTypes.length; i++) {
+  ProductTypes[i].addEventListener("click", function () {
+    if (i == 0) {
+      window.location.href = "BodyCare.html";
+    } else if (i == 1) {
+      window.location.href = "HairCare.html";
+    } else if (i == 2) {
+      window.location.href = "NUTRITION.html";
+    } else if (i == 3) {
+      window.location.href = "SERUM.html";
+    } else if (i == 4) {
+      window.location.href = "";
+    }
+  });
+}
+
 //  <-------  First Image Banner  ------->
 
 let imgArray1 = [
