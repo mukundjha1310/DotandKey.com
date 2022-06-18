@@ -115,5 +115,5 @@ function  displayproduct(serumdata)
 function serumpage(ele)
     {
    localStorage.setItem("serumdata",JSON.stringify(ele))
-   window.location.href="../serumLS/serum.html"
+   window.location.href="./serumLS/serumLS.html"
     }
