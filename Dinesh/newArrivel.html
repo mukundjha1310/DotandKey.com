@@ -448,7 +448,6 @@
     }
 
     ]
-let addToCartArray=JSON.parse(localStorage.getItem("addToCart"))|| [];
 
     newarrivel.forEach(function(elem,index){
         let div=document.createElement("div");
@@ -466,11 +465,9 @@ let addToCartArray=JSON.parse(localStorage.getItem("addToCart"))|| [];
         
         let addToCart=document.createElement("button");
         addToCart.innerText="ADD TO CART";
-        addToCart.addEventListener("click",function(){
+        addToCart.setAttribute("div","addToCart")
             
-        addToCartArray.push(newarrivel[index])
-         localStorage.setItem("addToCart",JSON.stringify(addToCartArray))
-        })
+        
         div.append(img,rating,title,price,addToCart)
         document.querySelector("#newArrivel").append(div)
     })
