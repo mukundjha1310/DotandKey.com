@@ -1,10 +1,8 @@
-body {
-  position: relative;
-}
+
 
 #navbar {
   width: 100%;
-  height: 25vh;
+  height: 23vh;
   border: 1px solid grey;
   position: sticky;
   top: 0px;
