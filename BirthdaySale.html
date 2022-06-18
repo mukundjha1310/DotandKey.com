@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Sales</title>
+    <style>
+      #slidImg {
+        margin-top: 50px;
+        position: relative;
+        border-radius: 20px;
+        box-sizing: border-box;
+      }
+      #slidImg > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .leftBtn,
+      .rightBtn {
+        position: absolute;
+        top: 45%;
+        border-radius: 100%;
+        padding: 1px 12px;
+        font-size: 250%;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+      }
+      .leftBtn:hover,
+      .rightBtn:hover {
+        background-color: rgba(136, 124, 98, 0.205);
+      }
+      .leftBtn {
+        left: -5px;
+      }
+      .rightBtn {
+        right: -5px;
+      }
+      body > h1 {
+        text-align: center;
+        font-size: 300%;
+        color: rgb(43, 43, 43);
+      }
+      .allProducts {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+        border-radius: 6px;
+        margin-top: 40px;
+        position: relative;
+        margin-bottom: 100px;
+      }
+      .allProducts > div > img {
+        width: 100%;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .allProducts > div {
+        box-shadow: rgba(0, 0, 0, 0.074) 2px 7px 15px;
+        border-radius: 3px;
+        height: auto;
+      }
+      .icons {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+      }
+      .icons > div + div {
+        font-size: 150%;
+        cursor: pointer;
+      }
+      .icons > div > span {
+        color: black;
+      }
+      .icons > div > span > span {
+        color: rgb(2, 103, 255);
+      }
+      .allProducts > div > div + p {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 10px 5px;
+        color: rgb(95, 95, 95);
+        font-family: Arial, sans-serif;
+      }
+      .allProducts > div > p + p {
+        font-weight: 550;
+        font-size: 90%;
+        color: rgb(136, 135, 135);
+      }
+      del {
+        font-weight: 500;
+        font-size: 92%;
+        color: rgb(116, 116, 116);
+      }
+      .allProducts > div > p + p {
+        font-weight: 600;
+        font-size: 92%;
+        color: rgb(212, 80, 153);
+        font-family: Arial, sans-serif;
+      }
+      .allProducts > div > button {
+        width: 100%;
+        color: white;
+        background-color: rgb(95, 95, 95);
+        padding: 8px;
+        font-weight: bold;
+        font-size: 96%;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border: transparent;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slidImg">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/BBB_Live_Now_with_Model_Banner_Desktop_1_3d395e81-2c54-42c3-8908-760099d24456.jpg?v=1655471413"
+        alt="img"
+      />
+      <button class="leftBtn"><</button>
+      <button class="rightBtn">></button>
+    </div>
+    <h1>SHOP ALL</h1>
+    <div class="allProducts"></div>
+  </body>
+</html>
+<script>
+  let imgArray1 = [
+    "https://cdn.shopify.com/s/files/1/0361/8553/8692/files/BBB_Live_Now_with_Model_Banner_Desktop_1_3d395e81-2c54-42c3-8908-760099d24456.jpg?v=1655471413",
+    "https://cdn.shopify.com/s/files/1/0361/8553/8692/files/CICA_SPF_Home_Screen_Desktop_Banner_1.png?v=1655529093",
+  ];
+
+  let Buttons = document.querySelectorAll("#slidImg>button");
+  let images = document.querySelector("#slidImg>img");
+
+  let imgPosition = 0;
+  Buttons[0].addEventListener("click", function () {
+    if (imgPosition === 0) {
+      imgPosition = imgArray1.length - 1;
+    } else {
+      imgPosition--;
+    }
+    images.src = imgArray1[imgPosition];
+  });
+
+  Buttons[1].addEventListener("click", function () {
+    if (imgPosition === imgArray1.length - 1) {
+      imgPosition = 0;
+    } else {
+      imgPosition++;
+    }
+    images.src = imgArray1[imgPosition];
+  });
+
+  setInterval(function () {
+    if (imgPosition == imgArray1.length - 1) {
+      imgPosition = 0;
+    } else {
+      imgPosition++;
+    }
+    images.src = imgArray1[imgPosition];
+  }, 2500);
+
+  //  <------------  Different Products  ------------->
+
+  let productDetails = [
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/20_VITC_720x.jpg?v=1655379925",
+      Name: "20% Vitamin C Serum with Blood Orange | For Skin Glow ",
+      DelePrice: "Rs: 665.00",
+      NewPrice: " Rs: 532.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/VITCMOIST_360x.jpg?v=1655302755",
+      Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
+      DelePrice: "Rs: 595.00",
+      NewPrice: " Rs: 499.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/PROBIOTICS_360x.jpg?v=1655302709",
+      Name: "72 HR Hydrating Probiotic Gel Moisturizer For Face...",
+      DelePrice: "Rs: 745.00",
+      NewPrice: " Rs: 596.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_e423c2c9-3a60-4a5e-9bc0-b0526b7f3c01_360x.jpg?v=1655302612",
+      Name: "Retinol & Ceramide Age Defense Night Cream For...",
+      DelePrice: "Rs: 945.00",
+      NewPrice: " Rs: 662.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/CICANIGHTGEL_3_360x.jpg?v=1655379818",
+      Name: "CICA Niacinamide Night Gel With Green Tea, Tea Tree...",
+      DelePrice: "Rs: 595.00",
+      NewPrice: " Rs: 506.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/ACNEBUSTING_360x.jpg?v=1655370921",
+      Name: "2% Salicylic Face Serum With Tea Tree Oil & Zinc",
+      DelePrice: "Rs: 665.00",
+      NewPrice: " Rs: 499.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/NIACINAMIDE_6ffa90b5-94d9-4ecc-bff1-c4c113fe47b5_360x.jpg?v=1655311005",
+      Name: "10% Niacinamide Face Serum With Zinc & Antioxidants",
+      DelePrice: "Rs: 665 .00",
+      NewPrice: " Rs: 499.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/MORINGASHAMPOO_360x.jpg?v=1655302883",
+      Name: "Argan Oil Anti Hairfall Shampoo With Moringa & Ker...",
+      DelePrice: "Rs: 695.00",
+      NewPrice: " Rs: 487.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/cicacleanser_360x.jpg?v=1655310819",
+      Name: "Cica & Green Tea Face Wash With Salicylic",
+      DelePrice: "Rs: 395.00",
+      NewPrice: " Rs: 299.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/LIPMASK_360x.jpg?v=1655311025",
+      Name: "Vitamin C Lip Mask With Vitamin E, Shea Butter,Hya...",
+      DelePrice: "Rs: 445.00",
+      NewPrice: " Rs: 356.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/cicatoner_360x.jpg?v=1655310832",
+      Name: "CICA & Niacinamide Face Toner With Green Tea & Tea...",
+      DelePrice: "Rs: 395.00",
+      NewPrice: " Rs: 299.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/1-GreenClayListing_1_360x.jpg?v=1649655908",
+      Name: "Salicylic & French Green Clay Face Mask With Match...",
+      DelePrice: "Rs: 695.00",
+      NewPrice: " Rs: 487.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/WATERMELONMOIST_360x.jpg?v=1655303303",
+      Name: "Watermelon Super Glow Matte Face Cream With Gl...",
+      DelePrice: "Rs: 595.00",
+      NewPrice: " Rs: 506.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-17_8fcc6a94-166a-4340-befe-75e648f17e32_360x.jpg?v=1655309802",
+      Name: "DEEP PORE FACIAL FOAM CLEANSER",
+      DelePrice: "Rs: 395.00",
+      NewPrice: " Rs: 296.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/VITCSERUM_360x.jpg?v=1655311150",
+      Name: "Vitamin C++ Glow Face Serum With Hyaluronic & Kak...",
+      DelePrice: "Rs: 795.00",
+      NewPrice: " Rs: 596.00",
+    },
+    {
+      Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/WATERMELONWASH_360x.jpg?v=1655303026",
+      Name: "Watermelon Super Glow Vitamin C Face Wash Gel",
+      DelePrice: "Rs: 395.00",
+      NewPrice: " Rs: 299.00",
+    },
+  ];
+
+  productDetails.map(function (el) {
+    let container = document.querySelector(".allProducts");
+    let Card = document.createElement("div");
+
+    let img = document.createElement("img");
+    img.setAttribute("src", el.Img);
+
+    let iconsdiv = document.createElement("div");
+    iconsdiv.setAttribute("class", "icons");
+    let star = document.createElement("div");
+    star.innerText = "⭐";
+    let span1 = document.createElement("span");
+    span1.innerText = "4.8/5";
+    let span2 = document.createElement("span");
+    span2.innerText = "(113)";
+    span1.append(span2);
+    star.append(span1);
+    let heart = document.createElement("div");
+    heart.innerText = "❤";
+    heart.style.color = "grey";
+    iconsdiv.append(star, heart);
+
+    let name = document.createElement("p");
+    name.innerText = el.Name;
+
+    let price = document.createElement("p");
+    let deletePrice = document.createElement("del");
+    deletePrice.innerText = el.DelePrice;
+    let newPrice = document.createElement("span");
+    newPrice.setAttribute("class", "newPrice");
+    newPrice.innerText = el.NewPrice;
+    price.append(deletePrice, newPrice);
+
+    let Btn = document.createElement("button");
+    Btn.setAttribute("class", "addToCart");
+    Btn.innerText = "ADD TO CART";
+
+    Card.append(img, iconsdiv, name, price, Btn);
+    container.append(Card);
+  });
+</script>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retinol & Ceramide</title>
+    <style>
+      .img_And_Details {
+        width: 98%;
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: auto;
+      }
+      .CICA_Img > div > img {
+        width: 100%;
+      }
+      .bigImg {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 30px;
+      }
+      .bigImg > img {
+        border-radius: 20px;
+      }
+      .smallImg {
+        width: 87%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 80px;
+        gap: 20px;
+        margin: auto;
+        box-sizing: border-box;
+      }
+      .smallImg > div > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .CICA_Details {
+        text-align: center;
+        font-family: Ubuntu, sans-serif;
+        padding: 10px;
+        font-size: 90%;
+        color: rgb(53, 53, 53);
+      }
+      .CICA_Details > p {
+        font-size: 20px;
+        color: rgb(78, 78, 78);
+      }
+      .rating {
+        font-size: 25px;
+        color: gray;
+      }
+      .rating > span {
+        color: black;
+        text-decoration: underline;
+        font-size: 85%;
+      }
+      .rating + h1 {
+        font-size: 30px;
+        text-align: left;
+        margin-left: 40px;
+        font-weight: 400;
+        margin-bottom: -10px;
+        color: rgb(255, 111, 135);
+      }
+      .rating + h1 > del {
+        color: rgb(95, 95, 95);
+      }
+      .rating + h1 + p {
+        font-size: 16px;
+        text-align: left;
+        margin-left: 40px;
+      }
+      select {
+        width: 85%;
+        padding: 10px;
+        font-size: 20px;
+        color: rgb(95, 95, 95);
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+      .addToCart {
+        width: 85%;
+        padding: 10px;
+        font-size: 20px;
+        background-color: rgb(59, 59, 59);
+        color: white;
+        font-weight: 600;
+        font-size: 17px;
+        border: transparent;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+      ul {
+        text-align: left;
+        font-size: 20px;
+        line-height: 30px;
+        color: rgb(90, 90, 90);
+      }
+      .perks {
+        width: 85%;
+        background-color: rgb(243, 243, 243);
+        margin: auto;
+      }
+      .perks > h1 {
+        text-align: left;
+        margin-left: 14px;
+        color: rgb(255, 111, 135);
+        margin-bottom: -10px;
+        font-family: "Tiempos Medium Italics";
+        font-style: italic;
+      }
+      .perks > h1 > img {
+        width: 5%;
+      }
+      .perks > ul > div {
+        width: 95%;
+        padding: 10px;
+        background-color: rgb(209, 208, 208);
+        color: rgb(58, 58, 58);
+        margin-top: 10px;
+        text-align: left;
+      }
+      .perks > ul > hr + li {
+        color: rgb(58, 58, 58);
+      }
+      .img_And_Details + h1 {
+        color: rgb(238, 6, 149);
+        margin-left: 200px;
+        font-family: "Tiempos Medium Italics";
+        font-style: italic;
+        font-size: 250%;
+        font-weight: bold;
+      }
+      .clinical_Results {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 50px;
+      }
+      .clinical_Results > div > img {
+        width: 100%;
+      }
+      .textResult {
+        width: 80%;
+        text-align: left;
+      }
+      .textResult > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .textResult > div > div:first-child {
+        color: rgb(238, 6, 149);
+        font-family: "Tiempos Medium Italics";
+        font-style: italic;
+        font-size: 300%;
+        font-weight: bold;
+        margin-right: 50px;
+        margin-left: -10px;
+      }
+      .textResult > div > div:last-child {
+        font-size: 180%;
+        color: rgb(92, 92, 92);
+        font-weight: 600;
+      }
+      .greenText {
+        color: rgb(238, 6, 149);
+        margin-top: -20px;
+      }
+      .lowerPoster {
+        background-image: url("https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Vector_503bcce7-49b2-491a-b3da-2767e11e26d5.png?v=1655061504");
+        background-size: cover;
+        background-position: center;
+        height: 360px;
+        width: 100%;
+        border: 2px solid;
+        text-align: center;
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+      }
+      .lowerPoster > h3 {
+        margin-top: 130px;
+        font-size: 30px;
+        font-weight: 400;
+      }
+      .lowerPoster > h1 {
+        margin-top: 10px;
+        font-size: 33px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img_And_Details">
+      <div class="CICA_Img">
+        <div class="bigImg">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_e423c2c9-3a60-4a5e-9bc0-b0526b7f3c01_720x.jpg?v=1655302612"
+          />
+        </div>
+        <div class="smallImg">
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_e423c2c9-3a60-4a5e-9bc0-b0526b7f3c01_720x.jpg?v=1655302612"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard2_552abd2a-40df-45be-9db1-65baf406cd26_360x.jpg?v=1655302612"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard3_09b4450d-d197-48a9-9c63-36d22107d8af_360x.jpg?v=1655302612"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard4_e209a800-a510-4ad4-9d1c-4c4d7ece3d77_360x.jpg?v=1655302612"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard5_9eff0c59-1a61-4230-b77f-dfc49d2bee5a_360x.jpg?v=1655302612"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_e423c2c9-3a60-4a5e-9bc0-b0526b7f3c01_720x.jpg?v=1655302612"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="CICA_Details">
+        <h1>
+          Retinol & Ceramide Age Defense Night Cream For Face| Treats Fine Lines
+          & Wrinkles | Mature, Combination, Dry Skin| Women & Men
+        </h1>
+        <p>Firms skin | Boosts collagen | Delays aging</p>
+        <p>ALL SKIN TYPES</p>
+        <div class="rating">
+          &starf;&starf;&starf;&starf;&starf;<span> 212 Reviews</span>
+        </div>
+        <h1><del>Rs: 945.00</del> Rs:<span class="newPrice">662.00</span></h1>
+        <p>Inclusive of All Taxes</p>
+        <select>
+          <option value="60ml">60ml</option></select
+        ><br />
+        <button class="addToCart">ADD TO CART</button><br />
+        <img
+          src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Group_441_8d1f7503-782c-44f8-9e79-80f88bfd4e24.png?v=1655462379"
+        />
+        <ul>
+          <li>
+            Targeted, overnight treatment that makes skin firm & restores
+            collagen
+          </li>
+          <li>Infused with the goodness of retinol, ceramide and hibiscus</li>
+          <li>Clinically proven to minimize fine lines and wrinkles</li>
+          <li>Promotes cell turnover to delay skin's ageing</li>
+          <li>Locks in moisture to prevent dryness & irritation</li>
+          <li>Skin appears firm, smooth, lifted and rejuvenated</li>
+        </ul>
+        <div class="perks">
+          <h1>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Frame_1_062580ad-1853-47a8-b1f9-88e6a29f5a3d.png?v=1652361494"
+            />
+            Perks to love
+          </h1>
+          <ul>
+            <li>BIRTHDAY SALE LIVE NOW: UPTO 50% OFF SITEWIDE + FREE GIFTS</li>
+            <hr />
+            <li>Get 5 piece Birthday special skincare kit on orders 2699+</li>
+            <div>View 3 More Offers ↓</div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h1>Clinical Results</h1>
+    <div class="clinical_Results">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/image_232.png?v=1655061503"
+        />
+      </div>
+      <div class="textResult">
+        <div>
+          <div>27%</div>
+          <div>
+            <p>Increase In</p>
+            <p class="greenText">Skin Firmness IN JUST 8 WEEKS*</p>
+          </div>
+        </div>
+        <hr />
+        <div>
+          <div>16%</div>
+          <div>
+            <p>Reduction</p>
+            <p class="greenText">In Wrinkles IN JUST 8 WEEKS*</p>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+
+    <div class="lowerPoster">
+      <h3>Results In</h3>
+      <h1>Smooth, firm, youthful skin</h1>
+    </div>
+  </body>
+</html>
+
+<script>
+  let divClicks = document.querySelectorAll(".smallImg>div>img");
+  let BigImg = document.querySelector(".bigImg>img");
+  for (let i = 0; i < divClicks.length; i++) {
+    divClicks[i].addEventListener("click", function () {
+      BigImg.src = divClicks[i].src;
+      for (let j = 0; j < divClicks.length; j++) {
+        if (i == j) {
+          divClicks[j].style.border = "3px solid";
+        } else {
+          divClicks[j].style.border = "transparent";
+        }
+      }
+    });
+  }
+</script>
