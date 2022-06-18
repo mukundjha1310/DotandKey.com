@@ -1,5 +1,6 @@
 
 let dataLS=JSON.parse(localStorage.getItem("serumdata"))
+console.log(dataLS)
 
 
  let productimg=document.createElement("div")
