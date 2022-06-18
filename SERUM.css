@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+body{
+   padding: 0;
+   margin: 0; 
+  }
+  
+  #navbar{
+    
+      width: 100%;
+      height: 25vh;
+      border: 1px solid grey;
+      position:fixed;
+      top: 0px;
+      background-color: white;
+  
+  }
+  #upperNav{
+      width: 100%;
+      height: 20%;
+      background-color: #50504b ;
+  }
+  #bottomNav{
+  width: 94%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  }
+  #bottomNav>div{
+      height: 100%;
+      width: 33.33%;
+  }
+  #leftNav{
+      display: flex;
+      align-items: center;
+  }
+  #centerNav>div{
+      width: 92%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  #centerNav>div>img{
+  width: 65%;
+  height: 70%;
+  }
+  #rightNav{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+   
+  }
+  #rightNav>div{
+      width: 94%;
+      height: 30%;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+    
+  }
+  #rightNav>div>a{
+      text-align: center;
+     
+  }
+  
+  
+  #rightNav>div>input{
+      height: 100%;
+      width: 300%;
+      border-radius: 7px;
+      border: 0.1px solid grey;
+      font-size: 120%;
+      color: grey;
+      margin-right: 10px;
+      
+  }
+  
+  body{
+      height: 200vh;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+  }
+  
+  svg{
+      width: 40%;
+      height: 80%;
+  }
+
+
+
+#top>img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 11%;
+}
+h1{
+text-align: center;
+font-size: 45px;
+color: #3C3C3C;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+ #middle{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto;
+    gap:40px 30px;
+    width: 90%;
+    margin: auto;
+ }
+
+ #middle>div>img{
+    width: 100%;
+ }
+ img+p{
+    text-align: center;
+    font-size: 14px;
+    color:rgb(24, 22, 22);
+    font-weight: 500;
+    margin-top: 30px;
+ }
+ #pricediv{
+    display:flex;
+    gap:4px;
+    justify-content: center;
+    font-size: 11px;
+    margin-bottom: 15px;
+
+ }
+ p+p{
+    text-align: center;
+    color: red;
+ }
+#middle>div>button{
+    display: block;
+    margin: auto;
+    width: 95%;
+    padding:8px  ;
+    background-color:gray ;
+    border: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight:600
+ }
+ .para{
+    height: 70px;
+ }
+ 
+ #facebook>svg{
+   width: 20px;
+   height: 20px;
+   }
+   #instagram>svg{
+   width: 20px;
+   height: 20px;
+   }
+   #youtube>svg{
+   width: 20px;
+   height: 20px;
+   }
+
+   #footer{
+       display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: 1;
+      gap: 0px;
+      padding-top: 50px;
+      padding-right: 50px;
+      padding-left: 50px;
+      margin-top: 10px;
+      
+       
+   }
+   #footer>div{
+       
+       display: flex;
+       flex-direction: column;
+       line-height: 2;
+   }
+   #followUs{
+       width: 60%;
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       font-family: 'Roboto', sans-serif;
+       font-size: 18px;
+       font-weight: bold;
+       cursor: pointer;
+   }
+   #footer>div>p{
+       font-family: 'Montserrat', sans-serif;
+       font-weight: bold;
+       font-size: 19px;
+   }
+
+   #footer>div>a{
+      text-decoration: none;
+      font-family: 'Roboto', sans-serif;
+      cursor: pointer;
+     
+      margin-top: 5px;
+      color: rgb(59, 50, 50);
+      font-size: 16px;
+      letter-spacing: 2px;
+
+   }
+
+   #footer>div button{
+      
+       background-color: black;
+       color: white;
+       padding: 10px 15px;
+   }
+   #footer>div input{
+       background-color: transparent;
+       border-color: transparent;
+       border-bottom: 2px solid black;
+       margin-right: 10px;
+       height: 100%;
+   }
+  #footer #year{
+       font-family: 'Roboto', sans-serif;
+       font-size: 16px;
+       font-weight: lighter;
+
+   }
+
+
+
+
+
+@media all and (min-width:700px) and (max-width:1024px)  {
+   #middle{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows:auto;
+      gap:40px 30px;
+      /* width: 90%; */
+      margin: auto;
+   }
+ }
+ @media all and (min-width:400px) and (max-width:699px)  {
+   #middle{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows:auto;
+      gap:40px 30px;
+      /* width: 90%; */
+      margin: auto;
+   }
+ }
+
+
+ 
