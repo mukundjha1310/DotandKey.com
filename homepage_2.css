@@ -1,0 +1,471 @@
+body {
+  padding: 0 20px;
+}
+.kitTitle {
+  text-align: center;
+  line-height: 1.2;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  padding: 1%;
+  color: #000000;
+}
+
+.kitTitle span {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: #000000;
+}
+#loveBanner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#loveBanner > img {
+  width: 92%;
+  border-radius: 10px;
+}
+
+#cleanBeuty-Text {
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+#cleanBeuty-Text > p {
+  width: 90%;
+  font-family: "Ubuntu", sans-serif;
+}
+#logo-list {
+  padding-top: 2%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logo {
+  width: 10%;
+  height: auto;
+  margin: 0% 3%;
+}
+.logo > img {
+  width: 100%;
+}
+#awardwinning {
+  width: 100%;
+  height: 20%;
+  padding: 0 20px;
+  display: flex;
+  box-sizing: border-box;
+}
+#awardwiningText {
+  height: auto;
+  width: 50%;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#awardwiningBanner {
+  height: auto;
+  width: 50%;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#awardwiningText > div:first-child {
+  padding: 5px;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+#awardwiningText > div:first-child > span:first-child {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: #000000;
+}
+#awardwiningText > div:last-child {
+  padding: 0px 28px 28px 28px;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+#awardwiningBanner > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#awardwiningBanner > img {
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
+}
+#btnLeft {
+  height: 50px;
+  position: relative;
+  top: 130px;
+  left: 30px;
+  background-color: transparent;
+  border: transparent;
+  font-size: xx-large;
+}
+#btnRight {
+  height: 50px;
+  position: relative;
+  top: 130px;
+  right: 30px;
+  background-color: transparent;
+  border: transparent;
+  font-size: xx-large;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-style: italic;
+}
+#asSeeIn {
+  width: 84%;
+  height: auto;
+  margin: auto;
+  display: flex;
+}
+#asSeeIn > div {
+  width: 33.33%;
+  height: auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+#asSeeIn > div > p {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+#asSeeIn > div > img {
+  padding: 20px;
+  width: 50%;
+  height: 40%;
+  margin-top: 0px;
+}
+
+#newReviewContent {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#newReviewContent > div:nth-child(2) {
+  width: 30%;
+  height: 100%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+#newReviewContent > div {
+  width: 20%;
+  height: 70%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#newReviewContent > div > img {
+  width: 100%;
+  margin-bottom: -30px;
+  overflow-wrap: normal;
+  border-radius: 10px;
+}
+
+.content {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  font-size: 13px;
+  border-radius: 10px;
+  position: relative;
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  line-height: 15px;
+  font-size: 12px;
+  padding: 10px;
+}
+#reviewer {
+  text-align: end;
+  padding: 5px;
+}
+#reviewbtnLeft {
+  height: 50px;
+  position: relative;
+  background-color: transparent;
+  border: transparent;
+  font-size: xx-large;
+  top: 270px;
+  left: 40px;
+}
+#reviewbtnRight {
+  height: 50px;
+  position: relative;
+  top: 0px;
+  right: 30px;
+  background-color: transparent;
+  border: transparent;
+  font-size: xx-large;
+  top: 270px;
+  left: 85%;
+}
+
+#newReview {
+  margin-top: -50px;
+}
+
+#skincareJournal {
+  display: flex;
+  justify-content: space-around;
+}
+#skincareJournal > div:nth-child(1) {
+  width: 40%;
+  height: auto;
+}
+#skincareJournal > div:nth-child(3) {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+#skincareJournal > div:nth-child(3) > a > button {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+}
+#skincareJournal > div:nth-child(3) > p {
+  font-size: 23px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+#skincareJournal img {
+  width: 100%;
+}
+
+#journalright {
+  position: relative;
+  width: 20px;
+  height: 30px;
+  top: 200px;
+  background-color: transparent;
+  border: transparent;
+  font-size: 25px;
+}
+#journalleft {
+  position: relative;
+  width: 20px;
+  height: 30px;
+  top: 200px;
+  background-color: transparent;
+  border: transparent;
+  font-size: 25px;
+}
+
+@media all and (min-width: 200px) and (max-width: 720px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .kitTitle {
+    font-size: 12px;
+  }
+
+  .kitTitle span {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  #cleanBeuty-Text {
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+  }
+
+  #cleanBeuty-Text > p {
+    width: 90%;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  #awardwinning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  #awardwiningText {
+    height: auto;
+    width: 100%;
+  }
+  #awardwiningBanner {
+    width: 100%;
+  }
+
+  #awardwiningText > div:last-child {
+    padding: 0px 28px 28px 28px;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+  }
+
+  #btnLeft {
+    top: 150px;
+    left: -300px;
+  }
+  #btnRight {
+    top: -510px;
+    right: -300px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+  #asSeeIn {
+    width: 84%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #asSeeIn > div {
+    width: 80%;
+    height: auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  #asSeeIn > div > p {
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  #asSeeIn > div > img {
+    padding: 20px;
+    width: 50%;
+    height: 40%;
+    margin-top: 0px;
+  }
+
+  #newReviewContent {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  #newReviewContent > div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  #newReviewContent > div {
+    width: 20%;
+    height: 70%;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  #newReviewContent > div > img {
+    width: 110%;
+    margin-bottom: -30px;
+    overflow-wrap: normal;
+    border-radius: 10px;
+  }
+
+  .content {
+    width: 100%;
+
+    font-weight: bold;
+    line-height: 8px;
+    font-size: 5px;
+  }
+
+  #skincareJournal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #skincareJournal > div:nth-child(1) {
+    width: 80%;
+  }
+  #skincareJournal > div:nth-child(3) {
+    width: 80%;
+  }
+
+  #skincareJournal > div:nth-child(3) > p {
+    font-size: 20px;
+  }
+
+  #journalright {
+    position: relative;
+    width: 20px;
+    height: 30px;
+    top: -100px;
+    left: 200px;
+    background-color: transparent;
+    border: transparent;
+    font-size: 25px;
+  }
+  #journalleft {
+    position: relative;
+    width: 20px;
+    height: 30px;
+    top: 70px;
+    right: 210px;
+    background-color: transparent;
+    border: transparent;
+    font-size: 25px;
+  }
+}
