@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Arrival</title>
     <style>
         /* ----------------------NAVBAR CSS------------------------ */
         body{
@@ -465,11 +465,46 @@
         
         let addToCart=document.createElement("button");
         addToCart.innerText="ADD TO CART";
-        addToCart.setAttribute("div","addToCart")
+        addToCart.setAttribute("class","addToCart")
             
         
         div.append(img,rating,title,price,addToCart)
         document.querySelector("#newArrivel").append(div)
     })
+
+     
+    
+    //Adding Products to the cartData key of loacl storage
+    let addToCartBtn=document.querySelectorAll(".addToCart");
+    let items=[];
+    for(let i=0; i<addToCartBtn.length; i++) {
+    addToCartBtn[i].addEventListener("click",function(event){ 
+        let item = {
+          id: "newArrival"+(i+1),
+          image:event.target.parentElement.children[0].src,
+          name: event.target.parentElement.children[3].innerText,
+          price: event.target.parentElement.children[3].children[0].innerText.replace(/[A-Za-z:]/g, ""),
+          quantity:1
+        }
+        if(JSON.parse(localStorage.getItem("cartData"))===null) {
+            items.push(item);
+            localStorage.setItem("cartData", JSON.stringify(items));
+            window.location.reload();
+        } else {
+            let localItems=JSON.parse(localStorage.getItem("cartData"));
+            localItems.map(data=> {
+              if(item.id===data.id) {
+                item.quantity=data.quantity+1;
+              } else {
+                items.push(data);
+              }
+            });
+        items.push(item);
+        localStorage.setItem("cartData", JSON.stringify(items)); 
+        window.location.reload();      
+        }
+        });
+    }
+
     
 </script>
