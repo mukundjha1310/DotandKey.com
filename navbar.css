@@ -1,5 +1,5 @@
-body{
-    position: relative;
+body {
+  position: relative;
 }
 
 #navbar {
@@ -9,6 +9,7 @@ body{
   position: sticky;
   top: 0px;
   background-color: white;
+  z-index: 1000;
 }
 #upperNav {
   width: 100%;
@@ -67,8 +68,6 @@ body{
   color: grey;
   margin-right: 10px;
 }
-
-
 
 svg {
   width: 40%;
