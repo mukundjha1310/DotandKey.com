@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
     <style>
-      div {
+      #login {
         width: 30%;
         margin: auto;
         display: grid;
         justify-content: center;
         align-items: center;
-
+        margin-top: 10%;
         padding: 50px 0px 50px 0px;
       }
-      label {
+      #login label {
         color: rgb(60, 60, 60);
 
         font-size: 14px;
@@ -29,9 +29,9 @@
         font-weight: 700;
       }
 
-      input {
+      #login input {
         width: 100%;
-
+        padding-left: 5px;
         margin-bottom: 30px;
         font-size: 18px;
         text-align: left;
@@ -41,7 +41,7 @@
         vertical-align: baseline;
         letter-spacing: 0.9px;
       }
-      h1 {
+      #login h1 {
         font-weight: bold;
         text-align: center;
         font-family: Ubuntu, sans-serif;
@@ -50,7 +50,7 @@
         font-weight: 700;
         margin-bottom: 50px;
       }
-      #btn {
+      #login #btn {
         width: 100%;
         height: 10%;
         font-weight: 400;
@@ -60,7 +60,7 @@
         font-size: 19px;
         padding: 10px 150px 10px 150px;
       }
-      p,
+      #login p,
       a {
         font-family: Montserrat, sans-serif;
         line-height: 34.2px;
@@ -72,12 +72,12 @@
         font-size: 18px;
         color: rgb(60, 60, 60);
       }
-      #error > input {
+      #login #error > input {
         background-color: rgb(255, 246, 246);
         border: 1px solid red;
         color: red;
       }
-      form > div {
+      #login form > div {
         border: 1px solid red;
         height: 19%;
         width: 100%;
@@ -85,59 +85,281 @@
         display: flex;
         justify-content: space-evenly;
       }
-      #facebook,
-      #google {
+      #ffacebook,
+      #ggoogle {
         display: flex;
         justify-content: space-between;
 
         background-color: rgb(20, 121, 189);
-        height: 1px;
+        height: auto;
         width: 100%;
-        padding: 20px 0px 30px 0px;
+        padding: 12px 5px;
         margin-bottom: 10px;
       }
-      #google {
+      #ggoogle {
         background-color: rgb(221, 75, 57);
         margin-bottom: 50px;
       }
-      #facebook > img {
-        height: 40px;
+      #ffacebook > img {
+        height: 30px;
 
         width: 30px;
         border: 1px solid rgb(20, 121, 189);
       }
-      #facebook > a > p {
+      #ffacebook > a > p {
         color: white;
         text-align: right;
       }
-      #google > img {
-        height: 40px;
-
+      #ggoogle > img {
+        height: 30px;
+        padding-left: 5px;
         width: 30px;
       }
-      #google > a > p {
+      #ggoogle > a > p {
         color: white;
         text-align: right;
+        font: 60px;
+      }
+    </style>
+    <style>
+      #facebook > svg {
+        width: 20px;
+        height: 20px;
+      }
+      #instagram > svg {
+        width: 20px;
+        height: 20px;
+      }
+      #youtube > svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      #footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1;
+        gap: 0px;
+        padding-top: 50px;
+        padding-right: 50px;
+        padding-left: 50px;
+      }
+      #footer > div {
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+      }
+      #followUs {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      #footer > div > p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+      }
+
+      #footer > div > a {
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        cursor: pointer;
+
+        margin-top: 5px;
+        color: rgb(59, 50, 50);
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+
+      #footer > div button {
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+      }
+      #footer > div input {
+        background-color: transparent;
+        border-color: transparent;
+        border-bottom: 2px solid black;
+        margin-right: 10px;
+        height: 100%;
+      }
+      #footer #year {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: lighter;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      #navbar {
+        width: 100%;
+        height: 25vh;
+        border: 1px solid grey;
+        position: fixed;
+        top: 0px;
+        background-color: white;
+      }
+      #upperNav {
+        width: 100%;
+        height: 20%;
+        background-color: #50504b;
+      }
+      #bottomNav {
+        width: 94%;
+        height: 80%;
+        margin: auto;
+        display: flex;
+      }
+      #bottomNav > div {
+        height: 100%;
+        width: 33.33%;
+      }
+      #leftNav {
+        display: flex;
+        align-items: center;
+      }
+      #centerNav > div {
+        width: 92%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #centerNav > div > img {
+        width: 65%;
+        height: 70%;
+      }
+      #rightNav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      #rightNav > div {
+        width: 94%;
+        height: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #rightNav > div > a {
+        text-align: center;
+      }
+
+      #rightNav > div > input {
+        height: 100%;
+        width: 300%;
+        border-radius: 7px;
+        border: 0.1px solid grey;
+        font-size: 120%;
+        color: grey;
+        margin-right: 10px;
+      }
+
+      body {
+        height: 200vh;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+      }
+
+      svg {
+        width: 40%;
+        height: 80%;
       }
     </style>
   </head>
   <body>
-    <div>
+    <div id="navbar">
+      <div id="upperNav"></div>
+      <div id="bottomNav">
+        <div id="leftNav">
+          <div>
+            <select name="filter" id=""></select>
+          </div>
+        </div>
+
+        <div id="centerNav">
+          <div>
+            <a href="hhwww.google.com">
+              <img
+                id="logo"
+                src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/unnamed_250x_200x_2x_260x_24408e11-6e3a-4a0c-8327-74d0455f7696_260x.jpg?v=1646547348"
+                alt="logo"
+            /></a>
+          </div>
+        </div>
+
+        <div id="rightNav">
+          <div>
+            <input type="text" placeholder="🔍 Search" />
+            <a href="">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Group_346.svg?v=1655211633"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <svg
+                viewBox="-35 0 512 512.00102"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m443.054688 495.171875-38.914063-370.574219c-.816406-7.757812-7.355469-13.648437-15.15625-13.648437h-73.140625v-16.675781c0-51.980469-42.292969-94.273438-94.273438-94.273438-51.984374 0-94.277343 42.292969-94.277343 94.273438v16.675781h-73.140625c-7.800782 0-14.339844 5.890625-15.15625 13.648437l-38.9140628 370.574219c-.4492192 4.292969.9453128 8.578125 3.8320308 11.789063 2.890626 3.207031 7.007813 5.039062 11.324219 5.039062h412.65625c4.320313 0 8.4375-1.832031 11.324219-5.039062 2.894531-3.210938 4.285156-7.496094 3.835938-11.789063zm-285.285157-400.898437c0-35.175782 28.621094-63.796876 63.800781-63.796876 35.175782 0 63.796876 28.621094 63.796876 63.796876v16.675781h-127.597657zm-125.609375 387.25 35.714844-340.097657h59.417969v33.582031c0 8.414063 6.824219 15.238282 15.238281 15.238282s15.238281-6.824219 15.238281-15.238282v-33.582031h127.597657v33.582031c0 8.414063 6.824218 15.238282 15.238281 15.238282 8.414062 0 15.238281-6.824219 15.238281-15.238282v-33.582031h59.417969l35.714843 340.097657zm0 0"
+                ></path>
+              </svg>
+            </a>
+
+            <svg
+              style="cursor: pointer"
+              onclick="what_to_show()"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                d="M256,0c-74.439,0-135,60.561-135,135s60.561,135,135,135s135-60.561,135-135S330.439,0,256,0z M256,240
+                    c-57.897,0-105-47.103-105-105c0-57.897,47.103-105,105-105c57.897,0,105,47.103,105,105C361,192.897,313.897,240,256,240z"
+              ></path>
+              <path
+                d="M297.833,301h-83.667C144.964,301,76.669,332.951,31,401.458V512h450V401.458C435.397,333.05,367.121,301,297.833,301z
+                    M451.001,482H451H61v-71.363C96.031,360.683,152.952,331,214.167,331h83.667c61.215,0,118.135,29.683,153.167,79.637V482z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="login">
       <h1>Login</h1>
-      <div id="facebook">
+      <div id="ffacebook">
         <img src="facebook.jpg" alt="" />
         <a
           href="https://www.facebook.com/login.php?skip_api_login=1&api_key=1667514393504118&kid_directed_site=0&app_id=1667514393504118&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fscope%3Demail%26state%3D13453-3342cdb0425e4505b9ea628a9d84d55f%26redirect_uri%3Dhttps%253A%252F%252Foneclicksociallogin.devcloudsoftware.com%252Fuser%252Ffacebookloginnotifier%252F%26client_id%3D1667514393504118%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D71452a8e-360d-4ab2-ab5e-781d1d6ab246%26tp%3Dunspecified&cancel_url=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Ffacebookloginnotifier%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D13453-3342cdb0425e4505b9ea628a9d84d55f%23_%3D_&display=page&locale=en_GB&pl_dbl=0"
         >
-          <p>Facebook login</p></a
+          <p class="facgoo">Facebook login</p></a
         >
       </div>
-      <div id="google">
+      <div id="ggoogle">
         <img src="google.png" alt="" />
         <a
           href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=13453-2eddc258feaa4951a8b00e57a352d6cd&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Fgoogleloginnotifier%2F&client_id=1003899641045-oa1oblo54ae2lh2qb2in254k1dgghs1g.apps.googleusercontent.com&response_type=code&include_granted_scopes=true&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&prompt=select_account&access_type=online&flowName=GeneralOAuthFlow"
         >
-          <p>Google login</p></a
+          <p class="facgoo">Google login</p></a
         >
       </div>
 
@@ -148,10 +370,104 @@
         <input id="mail" type="text" /><br />
         <label for="pass">PASSWORD</label><br />
 
-        <input id="pass" type="text" /><br />
+        <input id="pass" type="password" /><br />
         <input id="btn" type="submit" value="Sign in" /><br />
         <p><a href="signup.html">Don't have an account? Sign up here.</a></p>
       </form>
+    </div>
+    <div id="mainproject">
+      <hr />
+      <div id="footer">
+        <div>
+          <p>GET TO KNOW US</p>
+          <a href="aboutus.html">ABOUT US</a>
+          <a href="contactus.html">CONTACT US</a>
+          <a href="">EARTHCARE</a>
+          <a href="">AFFILIATE PROGRAM</a>
+          <a href="terms&condition.html">TERMS & CONDITION</a>
+          <a href="">REFUND & CANCELLATION</a>
+          <a href="">PRVACY POLICY</a>
+          <a href="">ORDER & SHIPPING</a>
+          <a href="">PAYMENT TERMS</a>
+          <a href="">TERMS AND SERVICE</a>
+          <a href="">REFUND POLICY</a>
+        </div>
+        <div>
+          <p>ALSO AVAILABLE ON</p>
+          <a
+            href="https://www.nykaa.com/brands/dot-key/c/7675?root=search,brand_menu,brand_list,Dot%20&%20Key&sourcepage=home&rtqu=Dot%20%26%20Key"
+            >NYKAA</a
+          >
+          <a
+            href="https://www.amazon.in/stores/node/19401367031?_encoding=UTF8&field-lbr_brands_browse-bin=Dot%20%26%20Key&ref_=bl_dp_s_web_19401367031"
+            >AMAZON</a
+          >
+          <a
+            href="https://www.flipkart.com/search?q=dot%20and%20key&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"
+            >FLIPCART</a
+          >
+          <a href="https://www.myntra.com/dot-and-key?src=bc">MYNTRA</a>
+        </div>
+        <div>
+          <p>STAY UPDATED</p>
+          <div>
+            <input type="email" placeholder="example@example.com" /><button>
+              SUBMIT
+            </button>
+          </div>
+          <div id="followUs">
+            <p>FOLLOW US</p>
+            <a id="facebook" href="https://business.facebook.com/dotandkey"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-facebook"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#444"
+                  d="M18.56 31.36V17.28h4.48l.64-5.12h-5.12v-3.2c0-1.28.64-2.56 2.56-2.56h2.56V1.28H19.2c-3.84 0-7.04 2.56-7.04 7.04v3.84H7.68v5.12h4.48v14.08h6.4z"
+                ></path></svg
+            ></a>
+            <a
+              id="instagram"
+              href="https://www.instagram.com/dotandkey.skincare/"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-instagram"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#444"
+                  d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z"
+                ></path>
+                <path
+                  fill="#444"
+                  d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z"
+                ></path></svg
+            ></a>
+            <a id="youtube" href="https://www.dotandkey.com/pages/christmas"
+              ><svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-youtube"
+                viewBox="0 0 21 20"
+              >
+                <path
+                  fill="#444"
+                  d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"
+                ></path></svg
+            ></a>
+          </div>
+
+          <p id="year">© 2022 Dot & Key</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
@@ -182,6 +498,15 @@
       console.log(signdata.length);
       err.value = "  *  Incorrect email or password";
       document.querySelector("#error").append(err);
+    }
+  }
+
+  function what_to_show() {
+    let len = JSON.parse(localStorage.getItem("login-data")) || [];
+    if (len.length > 0) {
+      window.location.href = "details.html";
+    } else {
+      window.location.href = "login.html";
     }
   }
 </script>
