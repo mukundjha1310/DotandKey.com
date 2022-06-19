@@ -32,7 +32,8 @@
           <div id="leftNav">
               <div>
                   <select onchange="yes()" name="filter" id="filter" >
-                     <option  value="Whats New"> WHAT'S NEW?</option>
+                      <option value=""></option>
+                      <option value="WHAT'S NEW?"> WHAT'S NEW?</option>
                       <option value="hair care">HAIR CARE</option>
                       <option value="body care">BODY CARE</option>
                       <option value="app">DOWNLOAD THE APP</option>
@@ -86,7 +87,7 @@
   
     function yes(){
       let x=document.querySelector("#filter").value;
-      if(x=="Whats New"){
+      if(x==="WHAT'S NEW?"){
           window.location.href = "newArrivel.html";
        }else if(x=="hair care"){
           window.location.href = "HairCare.html";

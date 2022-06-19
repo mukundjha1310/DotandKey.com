@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>body-care-homepage</title>
+    <link rel="stylesheet" href="navbar.css" />
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #upper {
+        /* border:1px solid red; */
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+      }
+      #upper > button {
+        position: absolute;
+        top: 50%;
+        font-size: 200%;
+        background-color: transparent;
+        color: black;
+      }
+      #upper > button:nth-child(2) {
+        right: 45%;
+      }
+      #upper > button:nth-child(3) {
+        left: 45%;
+      }
+    </style>
+
+    <style>
+      #secondUp {
+        display: flex;
+        width: 95%;
+        /* border: 1px solid green; */
+        margin-top: 8%;
+        margin-left: 2.5%;
+      }
+      #contaner {
+        /* border:1px solid red; */
+        width: 60%;
+        /* height:300px; */
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #contaner > div {
+        /* border: 1px solid green; */
+        width: 25%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      #contaner > div > img {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+      }
+      #contaner > div > img + p {
+        text-align: center;
+        margin: 4% 0%;
+        font-size: 25px;
+      }
+
+      #middle {
+        width: 80%;
+        margin: auto;
+      }
+      #middle > img {
+        width: 100%;
+      }
+      #texts {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        text-align: center;
+        font-style: italic;
+        font-size: 25px;
+      }
+      #texts > h5 {
+        color: #f1579b;
+      }
+    </style>
+
+    <style>
+      * {
+        margin: 0px;
+      }
+      #contaner1 {
+        width: 60%;
+        /* border:1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto);
+        margin: auto;
+      }
+      #contaner1 > div {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        /* border: 1px solid red; */
+      }
+      #contaner1 > div > img {
+        width: 100%;
+      }
+      #contaner1 > div {
+        text-align: center;
+        cursor: pointer;
+      }
+      h6 {
+        font-weight: bolder;
+        font-size: 19px;
+      }
+      #contaner1 > div > p {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #50504a;
+      }
+      #contaner1 > div > h6 + p + p {
+        text-decoration: line-through;
+      }
+      #contaner1 > div > h6 + p + p + p {
+        font-weight: bold;
+        color: red;
+        font-size: 20px;
+      }
+
+      /* button{
+            width:100%;
+            color: white;
+            background-color:#50504b;
+            border:0px;
+            cursor: pointer;
+            font-size: 20px;
+            
+        } */
+    </style>
+
+    <style>
+      * {
+        margin: 0px 0px;
+      }
+      #contaner2 {
+        width: 60%;
+        /* border:1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto);
+        margin: auto;
+      }
+      #contaner2 > div {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        /* border:1px solid green; */
+      }
+      #contaner2 > div > img {
+        width: 100%;
+        /* border: 1px solid green; */
+      }
+      #contaner2 > div {
+        text-align: center;
+        cursor: pointer;
+      }
+      h6 {
+        font-weight: bolder;
+        font-size: 19px;
+      }
+      #contaner2 > div > p {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #50504a;
+      }
+      #contaner2 > div > h6 + p + p {
+        text-decoration: line-through;
+      }
+      #contaner2 > div > h6 + p + p + p {
+        font-weight: bold;
+        color: red;
+        font-size: 20px;
+      }
+      button {
+        width: 100%;
+        height: 20px;
+        color: white;
+        background-color: #50504b;
+        border: 0px;
+        cursor: pointer;
+      }
+    </style>
+
+    <style>
+      #big {
+        width: 57%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        /* border: 1px solid red; */
+      }
+      #big > p {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      #big > h6 {
+        text-align: center;
+        font-size: 19px;
+      }
+      #big > p + h6 + p + p {
+        text-decoration: line-through;
+      }
+      #big > p + h6 + p + p + p {
+        color: red;
+        font-weight: bolder;
+        font-size: 20px;
+      }
+    </style>
+
+    <style>
+      * {
+        margin: 0px 0px;
+      }
+      #contaner3 {
+        width: 60%;
+        /* border:1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto);
+        gap: 20px 0px;
+        margin: auto;
+        margin-bottom: 10%;
+      }
+      #contaner3 > div {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        /* border:1px solid green; */
+      }
+      #contaner3 > div > img {
+        width: 100%;
+      }
+      #contaner3 > div {
+        text-align: center;
+        cursor: pointer;
+      }
+      #contaner3 > p + p {
+        font-weight: bolder;
+      }
+      #contaner3 > div > p {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #50504a;
+      }
+      #contaner3 > div > p:nth-child(4) {
+        text-decoration: line-through;
+      }
+      #contaner3 > div > p:nth-child(5) {
+        font-weight: bold;
+        color: red;
+        font-size: 20px;
+      }
+      button {
+        width: 100%;
+        height: 30px;
+        color: white;
+        background-color: #50504b;
+        border: 0px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+    </style>
+
+    <!-- Navbar -->
+
+    <!-- buttom part style -->
+    <style>
+      #facebook > svg {
+        width: 20px;
+        height: 20px;
+      }
+      #instagram > svg {
+        width: 20px;
+        height: 20px;
+      }
+      #youtube > svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      #footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1;
+        gap: 0px;
+        padding-top: 50px;
+        padding-right: 50px;
+        padding-left: 50px;
+      }
+      #footer > div {
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+      }
+      #followUs {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      #footer > div > p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+      }
+
+      #footer > div > a {
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        cursor: pointer;
+
+        margin-top: 5px;
+        color: rgb(59, 50, 50);
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+
+      #footer > div button {
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+      }
+      #footer > div input {
+        background-color: transparent;
+        border-color: transparent;
+        border-bottom: 2px solid black;
+        margin-right: 10px;
+        height: 100%;
+      }
+      #footer #year {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: lighter;
+      }
+    </style>
+    <!-- bottom -->
+    <!-- <style>
+    #facebook>svg{
+width: 20px;
+height: 20px;
+}
+#instagram>svg{
+width: 20px;
+height: 20px;
+}
+#youtube>svg{
+width: 20px;
+height: 20px;
+}
+
+#footer{
+    display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: 1;
+   gap: 0px;
+   padding-top: 50px;
+   padding-right: 50px;
+   padding-left: 50px;
+   
+    
+}
+#footer>div{
+    
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+#followUs{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#footer>div>p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#footer>div>a{
+   text-decoration: none;
+   font-family: 'Roboto', sans-serif;
+   cursor: pointer;
+  
+   margin-top: 5px;
+   color: rgb(59, 50, 50);
+   font-size: 16px;
+   letter-spacing: 2px;
+
+}
+
+#footer>div button{
+   
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+}
+#footer>div input{
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid black;
+    margin-right: 10px;
+    height: 100%;
+}
+#footer #year{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+
+}
+</style> -->
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="upperNav"></div>
+      <div id="bottomNav">
+        <div id="leftNav">
+          <div>
+            <select onchange="yes()" name="filter" id="filter">
+              <option value="Whats New">WHAT'S NEW?</option>
+              <option value="hair care">HAIR CARE</option>
+              <option value="body care">BODY CARE</option>
+              <option value="app">DOWNLOAD THE APP</option>
+              <option value="knowUsBatter">KNOW US BATTER</option>
+              <option value="profile">PROFILE</option>
+              <option value="login">LOGIN</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="centerNav">
+          <div>
+            <a href="index.html">
+              <img
+                id="logo"
+                src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/unnamed_250x_200x_2x_260x_24408e11-6e3a-4a0c-8327-74d0455f7696_260x.jpg?v=1646547348"
+                alt="logo"
+            /></a>
+          </div>
+        </div>
+
+        <div id="rightNav">
+          <div>
+            <input type="text" placeholder="🔍 Search" />
+            <a href="">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Group_346.svg?v=1655211633"
+                alt=""
+              />
+            </a>
+            <a href="cart.html">
+              <svg
+                viewBox="-35 0 512 512.00102"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m443.054688 495.171875-38.914063-370.574219c-.816406-7.757812-7.355469-13.648437-15.15625-13.648437h-73.140625v-16.675781c0-51.980469-42.292969-94.273438-94.273438-94.273438-51.984374 0-94.277343 42.292969-94.277343 94.273438v16.675781h-73.140625c-7.800782 0-14.339844 5.890625-15.15625 13.648437l-38.9140628 370.574219c-.4492192 4.292969.9453128 8.578125 3.8320308 11.789063 2.890626 3.207031 7.007813 5.039062 11.324219 5.039062h412.65625c4.320313 0 8.4375-1.832031 11.324219-5.039062 2.894531-3.210938 4.285156-7.496094 3.835938-11.789063zm-285.285157-400.898437c0-35.175782 28.621094-63.796876 63.800781-63.796876 35.175782 0 63.796876 28.621094 63.796876 63.796876v16.675781h-127.597657zm-125.609375 387.25 35.714844-340.097657h59.417969v33.582031c0 8.414063 6.824219 15.238282 15.238281 15.238282s15.238281-6.824219 15.238281-15.238282v-33.582031h127.597657v33.582031c0 8.414063 6.824218 15.238282 15.238281 15.238282 8.414062 0 15.238281-6.824219 15.238281-15.238282v-33.582031h59.417969l35.714843 340.097657zm0 0"
+                ></path>
+              </svg>
+            </a>
+            <div>
+              <svg
+                onclick="what_to_show()"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 512 512"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve"
+              >
+                <path
+                  d="M256,0c-74.439,0-135,60.561-135,135s60.561,135,135,135s135-60.561,135-135S330.439,0,256,0z M256,240
+                        c-57.897,0-105-47.103-105-105c0-57.897,47.103-105,105-105c57.897,0,105,47.103,105,105C361,192.897,313.897,240,256,240z"
+                ></path>
+                <path
+                  d="M297.833,301h-83.667C144.964,301,76.669,332.951,31,401.458V512h450V401.458C435.397,333.05,367.121,301,297.833,301z
+                        M451.001,482H451H61v-71.363C96.031,360.683,152.952,331,214.167,331h83.667c61.215,0,118.135,29.683,153.167,79.637V482z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="upper">
+      <img
+        id="imgslider"
+        src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/shop_all_desk_3_3.png?v=1653457175"
+        alt="img"
+      />
+      <button id="leftbutton">❮</button>
+      <button id="rightbutton">❯</button>
+    </div>
+    <div id="secondUp">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/2-SPREAD-THE-LOVE-Desktop-Final_3.png?v=1638165803"
+        alt="img"
+      />
+    </div>
+
+    <div id="texts">
+      <p>Just In</p>
+      <h2>BODYCARE</h2>
+    </div>
+
+    <div id="contaner">
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/ROSE_2.png?v=1636617537"
+          alt="img"
+        />
+        <p>Body Butter</p>
+      </div>
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/0_1.png?v=1636623319"
+          alt="img"
+        />
+        <p>Body Butter</p>
+      </div>
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/1.3_d0fb05cd-1610-4b66-ad0d-391d4aad2676.png?v=1636537323"
+          alt="img"
+        />
+        <p>Body Butter</p>
+      </div>
+    </div>
+
+    <div id="middle">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/3-Model-Image-Desktop_2_1ac15045-7c83-4680-9bd8-6d5a5878a0c4.png?v=1636955347"
+        alt="img"
+      />
+    </div>
+
+    <div id="texts">
+      <p>BODY</p>
+      <h2>SCRUB</h2>
+      <h5>Buff ' that Ruff '</h5>
+    </div>
+
+    <div id="contaner1"></div>
+    <div id="texts">
+      <p>BODY</p>
+      <h2>BUTTER</h2>
+      <h5>Buttery, melt-in goodness</h5>
+    </div>
+
+    <div id="contaner2"></div>
+
+    <div id="big">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/long_3.png?v=1646650083"
+        alt="img"
+      />
+      <p>4.8/5 (26)</p>
+      <h6>Avalon Lemon & Vitamin C</h6>
+      <p>Yoghurt Glow Body Moisturizer</p>
+      <p>Rs: 495.0</p>
+      <p>Rs: 445.00</p>
+      <button>ADD TO CART</button>
+    </div>
+
+    <div id="texts">
+      <p>OUR</p>
+      <h2>COMBOS</h2>
+    </div>
+
+    <div id="contaner3"></div>
+    <!-- Buttom part start -->
+    <!-- <div id="mainproject">
+    <hr />
+    <div id="footer">
+      <div>
+        <p>GET TO KNOW US</p>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="">EARTHCARE</a>
+        <a href="">AFFILIATE PROGRAM</a>
+        <a href="terms&condition.html">TERMS & CONDITION</a>
+        <a href="">REFUND & CANCELLATION</a>
+        <a href="">PRVACY POLICY</a>
+        <a href="">ORDER & SHIPPING</a>
+        <a href="">PAYMENT TERMS</a>
+        <a href="">TERMS AND SERVICE</a>
+        <a href="">REFUND POLICY</a>
+      </div>
+      <div>
+        <p>ALSO AVAILABLE ON</p>
+        <a
+          href="https://www.nykaa.com/brands/dot-key/c/7675?root=search,brand_menu,brand_list,Dot%20&%20Key&sourcepage=home&rtqu=Dot%20%26%20Key"
+          >NYKAA</a
+        >
+        <a
+          href="https://www.amazon.in/stores/node/19401367031?_encoding=UTF8&field-lbr_brands_browse-bin=Dot%20%26%20Key&ref_=bl_dp_s_web_19401367031"
+          >AMAZON</a
+        >
+        <a
+          href="https://www.flipkart.com/search?q=dot%20and%20key&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"
+          >FLIPCART</a
+        >
+        <a href="https://www.myntra.com/dot-and-key?src=bc">MYNTRA</a>
+      </div>
+      <div>
+        <p>STAY UPDATED</p>
+        <div>
+          <input type="email" placeholder="example@example.com" /><button>
+            SUBMIT
+          </button>
+        </div>
+        <div id="followUs">
+          <p>FOLLOW US</p>
+          <a id="facebook" href="https://business.facebook.com/dotandkey"
+            ><svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="icon icon-facebook"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="#444"
+                d="M18.56 31.36V17.28h4.48l.64-5.12h-5.12v-3.2c0-1.28.64-2.56 2.56-2.56h2.56V1.28H19.2c-3.84 0-7.04 2.56-7.04 7.04v3.84H7.68v5.12h4.48v14.08h6.4z"
+              ></path></svg
+          ></a>
+          <a
+            id="instagram"
+            href="https://www.instagram.com/dotandkey.skincare/"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="icon icon-instagram"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="#444"
+                d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z"
+              ></path>
+              <path
+                fill="#444"
+                d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z"
+              ></path></svg
+          ></a>
+          <a id="youtube" href="https://www.dotandkey.com/pages/christmas"
+            ><svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="icon icon-youtube"
+              viewBox="0 0 21 20"
+            >
+              <path
+                fill="#444"
+                d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"
+              ></path></svg
+          ></a>
+        </div>
+
+        <p id="year">© 2022 Dot & Key</p>
+      </div>
+    </div>
+  </div> -->
+    <!-- Buttom part end -->
+  </body>
+</html>
+
+<script>
+  let img = document.querySelector("#imgslider");
+  let btn0 = document.querySelector("#leftbutton");
+  let btn1 = document.querySelector("#rightbutton");
+
+  let imgCount = 0;
+  let imgArr = [
+    "https://cdn.shopify.com/s/files/1/0361/8553/8692/files/shop_all_desk_3_3.png?v=1653457175",
+    "https://cdn.shopify.com/s/files/1/0361/8553/8692/files/bodycare_desktop.png?v=1639668460",
+    "https://cdn.shopify.com/s/files/1/0361/8553/8692/files/desk_home_4.png?v=1645176921",
+  ];
+  btn0.addEventListener("click", function () {
+    if (imgCount === 0) {
+      imgCount = imgArr.length - 1;
+    } else {
+      imgCount--;
+    }
+    img.src = imgArr[imgCount];
+  });
+
+  btn1.addEventListener("click", function () {
+    if (imgCount === imgArr.length - 1) {
+      imgCount = 0;
+    } else {
+      imgCount++;
+    }
+    img.src = imgArr[imgCount];
+  });
+  setInterval(function () {
+    if (imgCount === imgArr.length - 1) {
+      imgCount = 0;
+    } else {
+      imgCount++;
+    }
+    img.src = imgArr[imgCount];
+  }, 2000);
+</script>
+
+<script>
+  let data = [
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/LEMONSCRUB_1800x1800.jpg?v=1655303198",
+      url: "body_inner1.html",
+      Rating: "4.7/5(26)",
+      name: "Vitamin C & Avalon Lemon",
+      sorce: "Hydrating Hyaluronic Body Lotion",
+      Off: "Rs: 545.00",
+      price: "Rs: 490.00",
+      button: "Add to cart",
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-13.jpg?v=1646477177",
+      url: "body_inner2.html",
+      Rating: " 4.7/5 (22)",
+      name: "Damask Rose & Lavender",
+      sorce: "Gel Body Scrub",
+      Off: "Rs: 545.00",
+      price: "Rs: 490.00",
+      button: "Add to cart",
+    },
+  ];
+
+  data.forEach(function (elem) {
+    let box = document.createElement("div");
+
+    let photo = document.createElement("img");
+    photo.setAttribute("src", elem.image_url);
+
+    let Rat = document.createElement("p");
+    Rat.innerText = elem.Rating;
+
+    let itemName = document.createElement("h6");
+    itemName.innerText = elem.name;
+
+    let Sorce = document.createElement("P");
+    Sorce.innerText = elem.sorce;
+
+    PrizeOff = document.createElement("p");
+    PrizeOff.innerText = elem.Off;
+
+    let Product_Price = document.createElement("p");
+    Product_Price.innerText = elem.price;
+
+    let btn = document.createElement("button");
+    btn.innerText = elem.button;
+    btn.setAttribute("class", "addToCart");
+
+    photo.addEventListener("click", function () {
+      window.location.href = elem.url;
+    });
+
+    box.append(photo, Rat, itemName, Sorce, PrizeOff, Product_Price, btn);
+    document.querySelector("#contaner1").append(box);
+  });
+
+  let data2 = [
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-6.jpg?v=1644862704",
+      url: "body_inner5.html",
+      Rating: " 5.0/5 (35)",
+      name: "Cocoa & French Vanilla",
+      sorce: "Rich Body Butter With 10% SHEA",
+      Off: "Rs: 595.00",
+      price: "Rs: 505.00",
+      button: "Add to cart",
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/1_2.png?v=1644862556",
+      url: "body_inner6.html",
+      Rating: "  4.9/5 (35)",
+      name: "Damask Rose & Lavender",
+      sorce: "Velvet Body Butter With 5% SHEA",
+      Off: "Rs: 595.00 ",
+      price: "Rs: 505.00",
+      button: "Add to cart",
+    },
+  ];
+
+  data2.forEach(function (elem) {
+    let box = document.createElement("div");
+
+    let photo = document.createElement("img");
+    photo.setAttribute("src", elem.image_url);
+
+    let Rat = document.createElement("p");
+    Rat.innerText = elem.Rating;
+
+    let itemName = document.createElement("h6");
+    itemName.innerText = elem.name;
+
+    let Sorce = document.createElement("P");
+    Sorce.innerText = elem.sorce;
+
+    PrizeOff = document.createElement("p");
+    PrizeOff.innerText = elem.Off;
+
+    let Product_Price = document.createElement("p");
+    Product_Price.innerText = elem.price;
+
+    let btn = document.createElement("button");
+    btn.innerText = elem.button;
+    btn.setAttribute("class", "addToCart");
+
+    photo.addEventListener("click", function () {
+      window.location.href = elem.url;
+    });
+    box.append(photo, Rat, itemName, Sorce, PrizeOff, Product_Price, btn);
+    document.querySelector("#contaner2").append(box);
+  });
+
+  let data3 = [
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/3_8.jpg?v=1643717568",
+      url: "body_inner8.html",
+      Rating: "  5.0/5 (10)",
+      name: "Citrus Crush Combo",
+      Off: "Rs: 595.00",
+      price: " Rs: 1,026.00",
+      button: "Add to cart",
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/2_9.jpg?v=1643714860",
+      url: "body_inner9.html",
+      Rating: "   5.0/5 (8)",
+      name: "Rosy Affair Combo",
+      Off: "Rs: 595.00",
+      price: "Rs: 1,026.00",
+      button: "Add to cart",
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/1_7.jpg?v=1643713066",
+      url: "body_inner10.html",
+      Rating: " 5.0/5 (7)",
+      name: "Soft and Glow Combo",
+      Off: "Rs: 595.00",
+      price: "Rs: 1,071.00",
+      button: "Add to cart",
+    },
+  ];
+
+  data3.forEach(function (elem) {
+    let box = document.createElement("div");
+
+    let photo = document.createElement("img");
+    photo.setAttribute("src", elem.image_url);
+
+    let Rat = document.createElement("p");
+    Rat.innerText = elem.Rating;
+
+    let itemName = document.createElement("p");
+    itemName.innerText = elem.name;
+
+    PrizeOff = document.createElement("p");
+    PrizeOff.innerText = elem.Off;
+
+    let Product_Price = document.createElement("p");
+    Product_Price.innerText = elem.price;
+
+    let btn = document.createElement("button");
+    btn.innerText = elem.button;
+    btn.setAttribute("class", "addToCart");
+
+    photo.addEventListener("click", function () {
+      window.location.href = elem.url;
+    });
+
+    box.append(photo, Rat, itemName, PrizeOff, Product_Price, btn);
+    document.querySelector("#contaner3").append(box);
+  });
+
+  document.querySelector("#big").addEventListener("click", function () {
+    window.location.href = "body_inner7.html";
+  });
+</script>
+
+<script>
+  function what_to_show() {
+    let len = JSON.parse(localStorage.getItem("login-data")) || [];
+    if (len.length > 0) {
+      window.location.href = "details.html";
+    } else {
+      window.location.href = "login.html";
+    }
+  }
+
+  function yes() {
+    let x = document.querySelector("#filter").value;
+    if (x == "Whats New") {
+      window.location.href = "newArrivel.html";
+    } else if (x == "hair care") {
+      window.location.href = "HairCare.html";
+    } else if (x == "body care") {
+      window.location.href = "BodyCare.html";
+    } else if (x == "app") {
+      window.location.href = "https://onelink.to/4bzhqy";
+    } else if (x == "knowUsBatter") {
+      window.location.href = "aboutus.html";
+    } else if (x == "profile") {
+      window.location.href = "details.html";
+    } else if (x == "login") {
+      window.location.href = "login.html";
+    }
+  }
+</script>
+
+<script>
+  //Adding Products to the cartData key of loacl storage
+  let addToCartBtn = document.querySelectorAll(".addToCart");
+  let items = [];
+  for (let i = 0; i < addToCartBtn.length; i++) {
+    addToCartBtn[i].addEventListener("click", function (event) {
+      let item = {
+        id: "Body_Care" + (i + 1),
+        image: event.target.parentElement.children[0].src,
+        name: event.target.parentElement.children[2].innerText,
+        price: event.target.parentElement.children[5].innerText.replace(
+          /[A-Za-z:]/g,
+          ""
+        ),
+        quantity: 1,
+      };
+      if (JSON.parse(localStorage.getItem("cartData")) === null) {
+        items.push(item);
+        localStorage.setItem("cartData", JSON.stringify(items));
+        window.location.reload();
+      } else {
+        let localItems = JSON.parse(localStorage.getItem("cartData"));
+        localItems.map((data) => {
+          if (item.id === data.id) {
+            item.quantity = data.quantity + 1;
+          } else {
+            items.push(data);
+          }
+        });
+        items.push(item);
+        localStorage.setItem("cartData", JSON.stringify(items));
+        window.location.reload();
+      }
+    });
+  }
+</script>
