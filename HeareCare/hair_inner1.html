@@ -494,7 +494,7 @@ height: 20px;
                 <select id="ml">
                     <option value="">50 ml</option>
                 </select>
-                <button>Add To Card</button>
+                <button class="addToCart">Add To Card</button>
                 <p>&#9825;</p>
                 <p>This Dot & Key’s ACTIVE Hair Treatment Mask is formulated with high-performance actives like Pea Peptide Protein, Hydrolyzed Keratin and Linoleic Acid and plant-nutrients like Argan Oil & Moringa Seed Oil and Shea butter.</p>
             </div>
@@ -615,7 +615,7 @@ height: 20px;
         <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/6_2f0e85e2-e7af-404f-9a8c-7f72886dc3af.png?v=1643004165" alt="img">
     </div>
 
-    <div id="mainproject">
+    <!-- <div id="mainproject">
         <hr />
         <div id="footer">
           <div>
@@ -708,7 +708,7 @@ height: 20px;
             <p id="year">© 2022 Dot & Key</p>
           </div>
         </div>
-      </div>
+      </div> -->
 </body>
 </html>
 <script>
@@ -741,3 +741,38 @@ height: 20px;
   }
   
 </script>
+
+
+<script>
+    // Adding Products to the cartData key of loacl storage
+    let addToCartBtn=document.querySelectorAll(".addToCart");
+     let items=[];
+     for(let i=0; i<addToCartBtn.length; i++) {
+     addToCartBtn[i].addEventListener("click",function(event){ 
+         let item = {
+           id: "hair_1_inner"+(i+1),
+           image:event.target.parentElement.parentElement.parentElement.children[0].children[0].children[0].src,
+           name: event.target.parentElement.children[0].innerText,
+           price: event.target.parentElement.children[1].children[1].innerText.replace(/[A-Za-z:]/g, ""),
+           quantity:1
+         }
+         if(JSON.parse(localStorage.getItem("cartData"))===null) {
+             items.push(item);
+             localStorage.setItem("cartData", JSON.stringify(items));
+             window.location.reload();
+         } else {
+             let localItems=JSON.parse(localStorage.getItem("cartData"));
+             localItems.map(data=> {
+               if(item.id===data.id) {
+                 item.quantity=data.quantity+1;
+               } else {
+                 items.push(data);
+               }
+             });
+         items.push(item);
+         localStorage.setItem("cartData", JSON.stringify(items)); 
+         window.location.reload();      
+         }
+         });
+       }
+ </script>

@@ -471,7 +471,7 @@ width: 20px;
     }
     </style>
 <!-- bottom -->
-<style>
+<!-- <style>
     #facebook>svg{
 width: 20px;
 height: 20px;
@@ -549,7 +549,7 @@ height: 20px;
     font-weight: lighter;
 
 }
-</style>
+</style> -->
 </head>
 <body>
         <div id="navbar">
@@ -675,7 +675,7 @@ height: 20px;
 
     </div>
 <!-- Buttom part start -->
-<div id="mainproject">
+<!-- <div id="mainproject">
     <hr />
     <div id="footer">
       <div>
@@ -768,7 +768,7 @@ height: 20px;
         <p id="year">© 2022 Dot & Key</p>
       </div>
     </div>
-  </div>
+  </div> -->
     <!-- Buttom part end -->
 </body>
 </html>
@@ -1042,4 +1042,39 @@ setInterval(function () {
      }
   }
   
+</script>
+
+
+<script>
+    //Adding Products to the cartData key of loacl storage
+   let addToCartBtn=document.querySelectorAll(".addToCart");
+    let items=[];
+    for(let i=0; i<addToCartBtn.length; i++) {
+    addToCartBtn[i].addEventListener("click",function(event){ 
+        let item = {
+          id: "Body_Care"+(i+1),
+          image:event.target.parentElement.children[0].src,
+          name: event.target.parentElement.children[2].innerText,
+          price: event.target.parentElement.children[5].innerText.replace(/[A-Za-z:]/g, ""),
+          quantity:1
+        }
+        if(JSON.parse(localStorage.getItem("cartData"))===null) {
+            items.push(item);
+            localStorage.setItem("cartData", JSON.stringify(items));
+            window.location.reload();
+        } else {
+            let localItems=JSON.parse(localStorage.getItem("cartData"));
+            localItems.map(data=> {
+              if(item.id===data.id) {
+                item.quantity=data.quantity+1;
+              } else {
+                items.push(data);
+              }
+            });
+        items.push(item);
+        localStorage.setItem("cartData", JSON.stringify(items)); 
+        window.location.reload();      
+        }
+        });
+    }
 </script>

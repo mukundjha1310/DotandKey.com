@@ -494,7 +494,7 @@ height: 20px;
                 <select id="ml">
                     <option value="">200 ml</option>
                 </select>
-                <button>Add To Card</button>
+                <button class="addToCart">Add To Card</button>
                 <p>&#9825;</p>
                 <p>Damaged, dry & frizzy hair are passé! Say hello to smooth, soft & manageable with our Ditch the Damage Combo. A haircare combo made with Love, 90% naturally derived ingredients and potent actives, all three products come together to nourish, repair and care from root to tip for healthy, shiny hair. Use it for yourself to see the results!  </p>
             </div>
@@ -612,7 +612,7 @@ height: 20px;
     <div>
         <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/6_2f0e85e2-e7af-404f-9a8c-7f72886dc3af.png?v=1643004165" alt="img">
     </div>
-    <div id="mainproject">
+    <!-- <div id="mainproject">
         <hr />
         <div id="footer">
           <div>
@@ -705,7 +705,7 @@ height: 20px;
             <p id="year">© 2022 Dot & Key</p>
           </div>
         </div>
-      </div>
+      </div> -->
 </body>
 </html>
 
@@ -739,3 +739,38 @@ height: 20px;
   }
   
 </script>
+
+
+<script>
+    // Adding Products to the cartData key of loacl storage
+    let addToCartBtn=document.querySelectorAll(".addToCart");
+     let items=[];
+     for(let i=0; i<addToCartBtn.length; i++) {
+     addToCartBtn[i].addEventListener("click",function(event){ 
+         let item = {
+           id: "hair_8_inner"+(i+1),
+           image:event.target.parentElement.parentElement.parentElement.children[0].children[0].children[0].src,
+           name: event.target.parentElement.children[0].innerText,
+           price: event.target.parentElement.children[1].children[1].innerText.replace(/[A-Za-z:]/g, ""),
+           quantity:1
+         }
+         if(JSON.parse(localStorage.getItem("cartData"))===null) {
+             items.push(item);
+             localStorage.setItem("cartData", JSON.stringify(items));
+             window.location.reload();
+         } else {
+             let localItems=JSON.parse(localStorage.getItem("cartData"));
+             localItems.map(data=> {
+               if(item.id===data.id) {
+                 item.quantity=data.quantity+1;
+               } else {
+                 items.push(data);
+               }
+             });
+         items.push(item);
+         localStorage.setItem("cartData", JSON.stringify(items)); 
+         window.location.reload();      
+         }
+         });
+       }
+ </script>
