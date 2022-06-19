@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <style>
+      form > img {
+        width: 90%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      form {
+        width: 25%;
+        padding: 20px;
+        margin: auto;
+        font-size: 19px;
+        font-weight: 600;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(63, 63, 63);
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      form > input {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: 5px;
+        border: 1px solid rgba(70, 70, 70, 0.616);
+        border-radius: 6px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #btn {
+        width: 94%;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 6px 20px;
+        cursor: pointer;
+        color: rgb(54, 54, 54);
+      }
+      #btn:hover {
+        border: 2px solid rgb(250, 124, 145);
+      }
+      div > img {
+        width: 50%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+      }
+      div {
+        display: flex;
+        align-items: top;
+        font-size: 16px;
+        color: rgb(78, 78, 78);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Dot_Key_Logo.png?138922"
+        alt="DotandKey"
+      />
+      <div>
+        <img
+          src="https://performance-tech.co.uk/img/card-payments.png"
+          alt=""
+        />
+        and more...
+      </div>
+      <label for="">Card Number</label><br />
+      <input id="cardnum" type="number" placeholder="Enter Card Number" /><br />
+      <label for="">CVV</label><br />
+      <input id="cvv" type="number" placeholder="Enter CVV Number" /><br />
+      <label for="">Expiry Date</label><br />
+      <input
+        id="expdate"
+        type="text"
+        placeholder="Enter Card's Expiry Date"
+      /><br />
+      <label for="">Name</label><br />
+      <input type="text" placeholder="Enter Card holder's Name" /><br />
+      <input id="btn" type="submit" />
+    </form>
+  </body>
+</html>
+<script>
+  let paymentDetails = JSON.parse(localStorage.getItem("payDetails"));
+  let payDetailsArr = [];
+  let payDetailsObj = {
+    CardNum: 123456789012,
+    CVV: 123,
+    ExpDate: 2022,
+  };
+  payDetailsArr.push(payDetailsObj);
+  localStorage.setItem("payDetails", JSON.stringify(payDetailsArr));
+
+  document.querySelector("form").addEventListener("submit", payFunction);
+  function payFunction(event) {
+    event.preventDefault();
+    let cardNum = document.querySelector("#cardnum").value;
+    let cvv = document.querySelector("#cvv").value;
+    let expDate = document.querySelector("#expdate").value;
+    if (validate(cardNum, cvv, expDate) == true) {
+      window.location.href = "OTP.html";
+    } else {
+      alert("Error");
+    }
+  }
+
+  function validate(cardNum, cvv, expDate) {
+    let matchData = paymentDetails.filter(function (elem) {
+      return (
+        elem.CardNum == cardNum && elem.CVV == cvv && elem.ExpDate == expDate
+      );
+    });
+    if (matchData.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+</script>

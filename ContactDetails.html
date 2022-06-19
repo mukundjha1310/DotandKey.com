@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Details</title>
+    <style>
+      #contDetails {
+        width: 40%;
+        margin: auto;
+        margin-top: 100px;
+      }
+      #contDetails > img {
+        width: 50%;
+        margin-left: 27%;
+      }
+      #contDetails > h1 {
+        font-size: 170%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(105, 105, 105);
+      }
+      label {
+        font-size: 130%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(65, 65, 65);
+      }
+      input {
+        width: 90%;
+        padding: 10px 10px;
+        font-size: 20px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+      }
+      input:hover {
+        border: 2px solid rgb(250, 124, 145);
+      }
+      #check1,
+      #check2 {
+        width: auto;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contDetails">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Dot_Key_Logo.png?138922"
+        alt="DotandKey"
+      />
+      <h1>Add Contact Details</h1>
+      <label for="">Email Address</label><br />
+      <input type="email" placeholder="Add your Email" /><br />
+      <label for="">Address</label><br />
+      <input type="text" placeholder="Add your Shipping Address" /><br />
+      <label for="">Mobile Number</label><br />
+      <input type="text" placeholder="Add your Mobile number" /><br />
+      <input type="checkbox" id="check1" /><label for="">Cash on shipment</label
+      ><br />
+      <input type="checkbox" id="check2" /><label for=""
+        >Instant Payment using Card</label
+      >
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("#check2").addEventListener("click", function () {
+    window.location.href = "AddCard.html";
+  });
+</script>
