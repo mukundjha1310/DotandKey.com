@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
          *{
             margin: 0px;
         }
         #contaner{
             width:100%;
-            margin-top: 10%;
+            margin-top: 2%;
             /* border:3px solid red; */
             display: flex;
             
@@ -21,7 +22,7 @@
         #contaner>div{
             width:45%;
             /* height: 500px; */
-            margin-top: 5%;
+            /* margin-top: 5%; */
             /* border:1px solid green; */
             
         }
@@ -229,98 +230,90 @@
         }
     </style>
 
-    <style>
-        body{
-    padding: 0;
-    margin: 0; 
-    }
-
-    #navbar{
-    
-    width: 100%;
-    height: 25vh;
-    border: 1px solid grey;
-    position:fixed;
-    top: 0px;
-    background-color: white;
-
-    }
-    #upperNav{
-    width: 100%;
-    height: 20%;
-    background-color: #50504b ;
-    }
-    #bottomNav{
-    width: 94%;
-    height: 80%;
-    margin: auto;
-    display: flex;
-    }
-    #bottomNav>div{
-    height: 100%;
-    width: 33.33%;
-    }
-    #leftNav{
-    display: flex;
-    align-items: center;
-    }
-    #centerNav>div{
-    width: 92%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-
-    #centerNav>div>img{
-    width: 65%;
-    height: 70%;
-    }
-    #rightNav{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    }
-    #rightNav>div{
-    width: 94%;
-    height: 30%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    
-    }
-    #rightNav>div>a{
-    text-align: center;
-    
-    }
-
-
-    #rightNav>div>input{
-    height: 100%;
-    width: 300%;
-    border-radius: 7px;
-    border: 0.1px solid grey;
-    font-size: 120%;
-    color: grey;
-    margin-right: 10px;
-    
-    }
-
+<style>
     body{
-    height: 200vh;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    }
+position: relative;
+}
 
-    svg{
-    width: 40%;
-    height: 80%;
-    }
-    </style>
+#navbar {
+width: 100%;
+height: 25vh;
+border: 1px solid grey;
+position: sticky;
+top: 0px;
+background-color: white;
+}
+#upperNav {
+width: 100%;
+height: 20%;
+background-color: #50504b;
+}
+#bottomNav {
+width: 94%;
+height: 80%;
+margin: auto;
+display: flex;
+}
+#bottomNav > div {
+height: 100%;
+width: 33.33%;
+}
+#leftNav {
+display: flex;
+align-items: center;
+}
+#centerNav > div {
+width: 92%;
+height: 100%;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
+#centerNav > div > img {
+width: 65%;
+height: 70%;
+}
+#rightNav {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+#rightNav > div {
+width: 94%;
+height: 30%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+#rightNav > div > a {
+text-align: center;
+}
+
+#rightNav > div > input {
+height: 100%;
+width: 300%;
+border-radius: 7px;
+border: 0.1px solid grey;
+font-size: 120%;
+color: grey;
+margin-right: 10px;
+}
+
+
+
+svg {
+width: 40%;
+height: 80%;
+cursor: pointer;
+}
+
+#navbar select{
+width: 20px;
+
+}
+</style>
 </head>
 <body>
 
@@ -331,14 +324,22 @@
         <div id="bottomNav">
             <div id="leftNav">
                 <div>
-                    <select name="filter" id="" ></select>
+                    <select onchange="yes()" name="filter" id="filter" >
+                       <option  value="Whats New"> WHAT'S NEW?</option>
+                        <option value="hair care">HAIR CARE</option>
+                        <option value="body care">BODY CARE</option>
+                        <option value="app">DOWNLOAD THE APP</option>
+                        <option value="knowUsBatter">KNOW US BATTER</option>
+                        <option value="profile">PROFILE</option>
+                        <option value="login">LOGIN</option>
+                    </select>
                     
                 </div>
             </div>
     
             <div id="centerNav">
                 <div>
-                   <a href="hhwww.google.com"> <img id="logo" src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/unnamed_250x_200x_2x_260x_24408e11-6e3a-4a0c-8327-74d0455f7696_260x.jpg?v=1646547348" alt="logo"></a>
+                   <a href="index.html"> <img id="logo" src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/unnamed_250x_200x_2x_260x_24408e11-6e3a-4a0c-8327-74d0455f7696_260x.jpg?v=1646547348" alt="logo"></a>
                 </div>
                 
             </div>
@@ -350,16 +351,16 @@
                     <a href="">
                         <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Group_346.svg?v=1655211633" alt="">
                     </a>
-                    <a href="">
+                    <a href="cart.html">
                         <svg viewBox="-35 0 512 512.00102" xmlns="http://www.w3.org/2000/svg"><path d="m443.054688 495.171875-38.914063-370.574219c-.816406-7.757812-7.355469-13.648437-15.15625-13.648437h-73.140625v-16.675781c0-51.980469-42.292969-94.273438-94.273438-94.273438-51.984374 0-94.277343 42.292969-94.277343 94.273438v16.675781h-73.140625c-7.800782 0-14.339844 5.890625-15.15625 13.648437l-38.9140628 370.574219c-.4492192 4.292969.9453128 8.578125 3.8320308 11.789063 2.890626 3.207031 7.007813 5.039062 11.324219 5.039062h412.65625c4.320313 0 8.4375-1.832031 11.324219-5.039062 2.894531-3.210938 4.285156-7.496094 3.835938-11.789063zm-285.285157-400.898437c0-35.175782 28.621094-63.796876 63.800781-63.796876 35.175782 0 63.796876 28.621094 63.796876 63.796876v16.675781h-127.597657zm-125.609375 387.25 35.714844-340.097657h59.417969v33.582031c0 8.414063 6.824219 15.238282 15.238281 15.238282s15.238281-6.824219 15.238281-15.238282v-33.582031h127.597657v33.582031c0 8.414063 6.824218 15.238282 15.238281 15.238282 8.414062 0 15.238281-6.824219 15.238281-15.238282v-33.582031h59.417969l35.714843 340.097657zm0 0"></path></svg>
                     </a>
-                    <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <div>
+                        <svg onclick="what_to_show()" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                         <path d="M256,0c-74.439,0-135,60.561-135,135s60.561,135,135,135s135-60.561,135-135S330.439,0,256,0z M256,240
                         c-57.897,0-105-47.103-105-105c0-57.897,47.103-105,105-105c57.897,0,105,47.103,105,105C361,192.897,313.897,240,256,240z"></path>
                         <path d="M297.833,301h-83.667C144.964,301,76.669,332.951,31,401.458V512h450V401.458C435.397,333.05,367.121,301,297.833,301z
                         M451.001,482H451H61v-71.363C96.031,360.683,152.952,331,214.167,331h83.667c61.215,0,118.135,29.683,153.167,79.637V482z"></path>
-                        </svg></a>
+                        </svg></div>
                 </div>
                 
     
@@ -367,19 +368,18 @@
         </div>
        </div>
       
-    
     <div id="contaner">
            <div class="class">
                 <div>
-                    <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/MORINGAMASK_720x.jpg?v=1655303151" alt="img">
+                    <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/MORINGASHAMPOO_720x.jpg?v=1655302883" alt="img">
                 </div>
                 <div id="small">
-                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/MORINGAMASK_720x.jpg?v=1655303151" alt="img"></div>
-                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/2_5c230f6f-062a-4f48-a9eb-826186ea7ae5_720x.png?v=1655303151" alt="img"></div>
-                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/3_a43882ad-6955-4a11-b0ff-b68832a95a71_720x.png?v=1655303151" alt="img"></div>
-                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/4_14eeea21-f659-4d32-8cca-7daf8ec783ae_720x.jpg?v=1655303151" alt="img"></div>
-                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/10_f7638dac-1eb3-4c37-b435-30cc1c55171c_720x.png?v=1655303151" alt="img"></div>
-                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/6_8e30bbda-8533-4752-a04e-31a753102a39_720x.png?v=1655303151" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_35e55b48-0b45-41a1-a9cc-1d07cb4bbf46_720x.jpg?v=1655302883" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/2-Moringa-Shampoo_720x.jpg?v=1655388050" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/3-Moringa-Shampoo_720x.jpg?v=1655388049" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/4-Moringa-Shampoo_720x.jpg?v=1655388050" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/5-Moringa-Shampoo_720x.jpg?v=1655388049" alt="img"></div>
+                    <div><img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/MORINGASHAMPOO_720x.jpg?v=1655302883" alt="img"></div>
                 </div>
                 <div>
                     <p>PERKS TO LOVE</p>
@@ -399,20 +399,20 @@
            </div>
            <div id="second">
             <div>
-                <h3>Pea Peptide Strengthening Moringa & Argan Hair Mask</h3>
+                <h3>Argan Oil Anti Hairfall Shampoo With Moringa & Keratin| Helps Reduce Hair Fall & Breakage |For Silky, Smooth Hair| Frizzy,Dry Hair| 100% Sulphate Free| Women & Men</h3>
                 <div id="Rs">
                     <h3>
-                        Rs: 645.00
+                        Rs: 695.00
                     </h3>
                     <h3>
-                        Rs:  452.00
+                        Rs:  487.00
                     </h3>
                 </div>
                 <p>
                     Inclusive of All Taxes
                 </p>
                 <select id="ml">
-                    <option value="">200 ml</option>
+                    <option value="">50 ml</option>
                 </select>
                 <button>Add To Card</button>
                 <p>&#9825;</p>
@@ -420,10 +420,11 @@
             </div>
             <div id="point">
                 <ul>
-                    <li>Stimulates hair follicle stem cells to strengthen hair & reduce hair fall.</li>
-                    <li>Intensively nourishes the hair from root to tip, and promotes new hair growth.</li>
-                    <li>Reduces breakage while adding strength to weak and thinning hair.</li>
-                    <li>Argan oil infused to add shine and volume to dull limp hair.</li>
+                    <li>Gentle sulphate-free Moringa & Argan Oil Shampoo with Vitamin E for hairfall control </li>
+                    <li>Also contains high-performance actives like Pea Peptide Protein and Hydrolyzed Keratin </li>
+                    <li>Strengthens the hair follicles to reduce hairfall</li>
+                    <li>Adds shine and volume to dull limp hair</li>
+                    <li>Is keratin infused for silky smooth hair</li>
                 </ul>
             </div>
             
@@ -535,3 +536,33 @@
     </div>
 </body>
 </html>
+<script>
+    function what_to_show() {
+    let len = JSON.parse(localStorage.getItem("login-data")) || [];
+    if (len.length > 0) {
+      window.location.href = "details.html";
+    } else {
+      window.location.href = "login.html";
+    }
+  }
+
+  function yes(){
+    let x=document.querySelector("#filter").value;
+    if(x=="Whats New"){
+        window.location.href = "newArrivel.html";
+     }else if(x=="hair care"){
+        window.location.href = "HairCare.html";
+     }else if(x=="body care"){
+        window.location.href = "BodyCare.html";
+     }else if(x=="app"){
+        window.location.href ="https://onelink.to/4bzhqy";
+     }else if(x=="knowUsBatter"){
+        window.location.href ="aboutus.html";
+     }else if(x=="profile"){
+        window.location.href ="details.html";
+     }else if(x=="login"){
+        window.location.href ="login.html";
+     }
+  }
+  
+</script>
