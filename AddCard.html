@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Page</title>
+    <title>Add Card Page</title>
     <style>
       form > img {
         width: 90%;
@@ -85,39 +85,12 @@
   </body>
 </html>
 <script>
-  let paymentDetails = JSON.parse(localStorage.getItem("payDetails"));
-  let payDetailsArr = [];
-  let payDetailsObj = {
-    CardNum: 123456789012,
-    CVV: 123,
-    ExpDate: 2022,
-  };
-  payDetailsArr.push(payDetailsObj);
-  localStorage.setItem("payDetails", JSON.stringify(payDetailsArr));
+  
 
   document.querySelector("form").addEventListener("submit", payFunction);
   function payFunction(event) {
     event.preventDefault();
-    let cardNum = document.querySelector("#cardnum").value;
-    let cvv = document.querySelector("#cvv").value;
-    let expDate = document.querySelector("#expdate").value;
-    if (validate(cardNum, cvv, expDate) == true) {
-      window.location.href = "OTP.html";
-    } else {
-      alert("Error");
-    }
-  }
-
-  function validate(cardNum, cvv, expDate) {
-    let matchData = paymentDetails.filter(function (elem) {
-      return (
-        elem.CardNum == cardNum && elem.CVV == cvv && elem.ExpDate == expDate
-      );
-    });
-    if (matchData.length > 0) {
-      return true;
-    } else {
-      return false;
-    }
+    alert("Card Added");
+    window.location.href="ContactDetails.html";
   }
 </script>

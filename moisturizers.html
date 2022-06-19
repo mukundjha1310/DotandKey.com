@@ -4,196 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <style>
-      #login {
-        width: 30%;
-        margin: auto;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10%;
-        padding: 50px 0px 50px 0px;
-      }
-      #login label {
-        color: rgb(60, 60, 60);
-        font-size: 14px;
-        font-family: Montserrat, sans-serif;
-        line-height: 19.6001px;
-        vertical-align: baseline;
-        letter-spacing: 2.80001px;
-        word-spacing: 0px;
-        margin: 0px 0px 10px;
-        padding: 0px;
-        font-weight: 700;
-      }
+    <title>Moisturizers</title>
 
-      #login input {
-        width: 100%;
-        padding-left: 5px;
-        margin-bottom: 30px;
-        font-size: 18px;
-        text-align: left;
-        border: 1px solid silver;
-        margin-top: 19px;
-        line-height: 34.2px;
-        vertical-align: baseline;
-        letter-spacing: 0.9px;
-      }
-      #login h1 {
-        font-weight: bold;
-        text-align: center;
-        font-family: Ubuntu, sans-serif;
-        font-size: 27px;
-        color: rgb(60, 60, 60);
-        font-weight: 700;
-        margin-bottom: 50px;
-      }
-      #login #btn {
-        width: 100%;
-        height: 10%;
-        font-weight: 400;
-        background-color: rgb(60, 60, 60);
-        border: transparent;
-        color: white;
-        font-size: 19px;
-        padding: 10px 150px 10px 150px;
-      }
-      #login p,
-      a {
-        font-family: Montserrat, sans-serif;
-        line-height: 34.2px;
-        vertical-align: baseline;
-        letter-spacing: 0.9px;
-        margin: auto;
-        text-align: left;
-        text-decoration: none;
-        font-size: 18px;
-        color: rgb(60, 60, 60);
-      }
-      #login #error > input {
-        background-color: rgb(255, 246, 246);
-        border: 1px solid red;
-        color: red;
-      }
-      #login form > div {
-        border: 1px solid red;
-        height: 19%;
-        width: 100%;
-        margin-right: 90px;
-        display: flex;
-        justify-content: space-evenly;
-      }
-      #ffacebook,
-      #ggoogle {
-        display: flex;
-        justify-content: space-between;
+    <!-- Roboto font style  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
 
-        background-color: rgb(20, 121, 189);
-        height: auto;
-        width: 100%;
-        padding: 12px 5px;
-        margin-bottom: 10px;
-      }
-      #ggoogle {
-        background-color: rgb(221, 75, 57);
-        margin-bottom: 50px;
-      }
-      #ffacebook > img {
-        height: 30px;
+    <!-- Montserrat font style  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        width: 30px;
-        border: 1px solid rgb(20, 121, 189);
-      }
-      #ffacebook > a > p {
-        color: white;
-        text-align: right;
-      }
-      #ggoogle > img {
-        height: 30px;
-        padding-left: 5px;
-        width: 30px;
-      }
-      #ggoogle > a > p {
-        color: white;
-        text-align: right;
-        font: 60px;
-      }
-    </style>
-    <style>
-      #facebook > svg {
-        width: 20px;
-        height: 20px;
-      }
-      #instagram > svg {
-        width: 20px;
-        height: 20px;
-      }
-      #youtube > svg {
-        width: 20px;
-        height: 20px;
-      }
+    <!-- Star Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-      #footer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1;
-        gap: 0px;
-        padding-top: 50px;
-        padding-right: 50px;
-        padding-left: 50px;
-      }
-      #footer > div {
-        display: flex;
-        flex-direction: column;
-        line-height: 2;
-      }
-      #followUs {
-        width: 60%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        font-family: "Roboto", sans-serif;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      #footer > div > p {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 19px;
-      }
-
-      #footer > div > a {
-        text-decoration: none;
-        font-family: "Roboto", sans-serif;
-        cursor: pointer;
-
-        margin-top: 5px;
-        color: rgb(59, 50, 50);
-        font-size: 16px;
-        letter-spacing: 2px;
-      }
-
-      #footer > div button {
-        background-color: black;
-        color: white;
-        padding: 10px 15px;
-      }
-      #footer > div input {
-        background-color: transparent;
-        border-color: transparent;
-        border-bottom: 2px solid black;
-        margin-right: 10px;
-        height: 100%;
-      }
-      #footer #year {
-        font-family: "Roboto", sans-serif;
-        font-size: 16px;
-        font-weight: lighter;
-      }
-    </style>
+    <!-- Adding CSS file to html file -->
+    <link rel="stylesheet" href="moisturizers.css" />
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="bottomPart.css" />
   </head>
   <body>
     <div id="navbar">
@@ -258,11 +92,11 @@
               >
                 <path
                   d="M256,0c-74.439,0-135,60.561-135,135s60.561,135,135,135s135-60.561,135-135S330.439,0,256,0z M256,240
-                      c-57.897,0-105-47.103-105-105c0-57.897,47.103-105,105-105c57.897,0,105,47.103,105,105C361,192.897,313.897,240,256,240z"
+                        c-57.897,0-105-47.103-105-105c0-57.897,47.103-105,105-105c57.897,0,105,47.103,105,105C361,192.897,313.897,240,256,240z"
                 ></path>
                 <path
                   d="M297.833,301h-83.667C144.964,301,76.669,332.951,31,401.458V512h450V401.458C435.397,333.05,367.121,301,297.833,301z
-                      M451.001,482H451H61v-71.363C96.031,360.683,152.952,331,214.167,331h83.667c61.215,0,118.135,29.683,153.167,79.637V482z"
+                        M451.001,482H451H61v-71.363C96.031,360.683,152.952,331,214.167,331h83.667c61.215,0,118.135,29.683,153.167,79.637V482z"
                 ></path>
               </svg>
             </div>
@@ -302,37 +136,17 @@
 
     <!-- <------------------------- NAVBAR END ----------------->
 
-    <div id="login">
-      <h1>Login</h1>
-      <div id="ffacebook">
-        <img src="facebook.jpg" alt="" />
-        <a
-          href="https://www.facebook.com/login.php?skip_api_login=1&api_key=1667514393504118&kid_directed_site=0&app_id=1667514393504118&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fscope%3Demail%26state%3D13453-3342cdb0425e4505b9ea628a9d84d55f%26redirect_uri%3Dhttps%253A%252F%252Foneclicksociallogin.devcloudsoftware.com%252Fuser%252Ffacebookloginnotifier%252F%26client_id%3D1667514393504118%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D71452a8e-360d-4ab2-ab5e-781d1d6ab246%26tp%3Dunspecified&cancel_url=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Ffacebookloginnotifier%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D13453-3342cdb0425e4505b9ea628a9d84d55f%23_%3D_&display=page&locale=en_GB&pl_dbl=0"
-        >
-          <p class="facgoo">Facebook login</p></a
-        >
-      </div>
-      <div id="ggoogle">
-        <img src="google.png" alt="" />
-        <a
-          href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=13453-2eddc258feaa4951a8b00e57a352d6cd&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Fgoogleloginnotifier%2F&client_id=1003899641045-oa1oblo54ae2lh2qb2in254k1dgghs1g.apps.googleusercontent.com&response_type=code&include_granted_scopes=true&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&prompt=select_account&access_type=online&flowName=GeneralOAuthFlow"
-        >
-          <p class="facgoo">Google login</p></a
-        >
-      </div>
+    <!-- <input type="button" value="Open a Popup Window" onclick="window.open('cart.html','popUpWindow','height=1500,width=1100,left=200,top=200,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');"> -->
 
-      <form>
-        <p id="error"></p>
-
-        <label for="email">EMAIL</label><br />
-        <input id="mail" type="text" /><br />
-        <label for="pass">PASSWORD</label><br />
-
-        <input id="pass" type="password" /><br />
-        <input id="btn" type="submit" value="Sign in" /><br />
-        <p><a href="signup.html">Don't have an account? Sign up here.</a></p>
-      </form>
+    <div id="topImage">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0361/8553/8692/collections/By-catagory-11_73cd9359-5cc9-46db-b538-22de93ec14a3_1512x.png?v=1648272494"
+        alt="Error"
+      />
     </div>
+    <h1>MOISTURIZERS</h1>
+    <div id="allProd"></div>
+
     <div id="mainproject">
       <hr />
       <div id="footer">
@@ -429,42 +243,5 @@
     </div>
   </body>
 </html>
-<script>
-  document.querySelector("form").addEventListener("submit", loginactionfun);
 
-  let signdata = JSON.parse(localStorage.getItem("signupdata")) || [];
-  let login_data = JSON.parse(localStorage.getItem("login-data")) || [];
-  function loginactionfun() {
-    event.preventDefault();
-
-    document.querySelector("#error").innerHTML = "";
-    let count = 0;
-    let EEmail = document.querySelector("#mail").value;
-    let PPaas = document.querySelector("#pass").value;
-    for (let i = 0; i < signdata.length; i++) {
-      if (signdata[i].Email == EEmail && signdata[i].Password == PPaas) {
-        count++;
-        login_data.push(signdata[i]);
-        localStorage.setItem("login-data", JSON.stringify(login_data));
-      }
-    }
-
-    if (count > 0) {
-      window.location.href = "index.html";
-    } else {
-      let err = document.createElement("input");
-      console.log(signdata.length);
-      err.value = "  *  Incorrect email or password";
-      document.querySelector("#error").append(err);
-    }
-  }
-
-  function what_to_show() {
-    let len = JSON.parse(localStorage.getItem("login-data")) || [];
-    if (len.length > 0) {
-      window.location.href = "details.html";
-    } else {
-      window.location.href = "login.html";
-    }
-  }
-</script>
+<script src="moisturizers.js"></script>
