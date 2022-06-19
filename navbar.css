@@ -2,7 +2,7 @@
 
 #navbar {
   width: 100%;
-  height: 23vh;
+  height: 20vh;
   border: 1px solid grey;
   position: sticky;
   top: 0px;
@@ -13,6 +13,10 @@
   width: 100%;
   height: 20%;
   background-color: #50504b;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 #bottomNav {
   width: 94%;
