@@ -480,7 +480,7 @@ height: 20px;
                 <select id="ml">
                     <option value="">200 ml</option>
                 </select>
-                <button>Add To Card</button>
+                <button class="addToCart">Add To Card</button>
                 <p>&#9825;</p>
                 <p>A warm, melt-in-your-skin body butter with the goodness of 10% shea & cocoa butter for intense hydration leaving skin ultra-soft, smooth & glowing with the lingering essence of vanilla.</p>
                 <h1>Feel the Love</h1>
@@ -514,7 +514,7 @@ height: 20px;
             <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/cocoa_butter_1.jpg?v=1638789166" alt="img">
     </div>
 
-    <div id="mainproject">
+    <!-- <div id="mainproject">
         <hr />
         <div id="footer">
           <div>
@@ -607,7 +607,7 @@ height: 20px;
             <p id="year">© 2022 Dot & Key</p>
           </div>
         </div>
-      </div>
+      </div> -->
     
 </body>
 </html>
@@ -642,3 +642,39 @@ height: 20px;
   }
   
 </script>
+
+
+
+<script>
+    // Adding Products to the cartData key of loacl storage
+    let addToCartBtn=document.querySelectorAll(".addToCart");
+     let items=[];
+     for(let i=0; i<addToCartBtn.length; i++) {
+     addToCartBtn[i].addEventListener("click",function(event){ 
+         let item = {
+           id: "body_5_inner"+(i+1),
+           image:event.target.parentElement.parentElement.parentElement.children[0].children[0].children[0].src,
+           name: event.target.parentElement.children[0].innerText,
+           price: event.target.parentElement.children[1].children[1].innerText.replace(/[A-Za-z:]/g, ""),
+           quantity:1
+         }
+         if(JSON.parse(localStorage.getItem("cartData"))===null) {
+             items.push(item);
+             localStorage.setItem("cartData", JSON.stringify(items));
+             window.location.reload();
+         } else {
+             let localItems=JSON.parse(localStorage.getItem("cartData"));
+             localItems.map(data=> {
+               if(item.id===data.id) {
+                 item.quantity=data.quantity+1;
+               } else {
+                 items.push(data);
+               }
+             });
+         items.push(item);
+         localStorage.setItem("cartData", JSON.stringify(items)); 
+         window.location.reload();      
+         }
+         });
+       }
+ </script>
