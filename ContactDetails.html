@@ -9,7 +9,7 @@
       #contDetails {
         width: 40%;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 40px;
       }
       #contDetails > img {
         width: 50%;
@@ -33,12 +33,23 @@
         border-radius: 5px;
       }
       input:hover {
-        border: 2px solid rgb(250, 124, 145);
+        border: 2px solid rgb(250, 114, 136);
       }
       #check1,
       #check2 {
         width: auto;
         padding: 5px;
+      }
+      button {
+        padding: 8px;
+        background-color: rgb(252, 152, 169);
+        border: transparent;
+        border-radius: 7px 10px;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(19, 19, 19);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -50,21 +61,47 @@
       />
       <h1>Add Contact Details</h1>
       <label for="">Email Address</label><br />
-      <input type="email" placeholder="Add your Email" /><br />
+      <input type="email" placeholder="Add your Email" id="email" /><br />
       <label for="">Address</label><br />
-      <input type="text" placeholder="Add your Shipping Address" /><br />
+      <input
+        type="text"
+        placeholder="Add your Shipping Address"
+        id="add"
+      /><br />
       <label for="">Mobile Number</label><br />
-      <input type="text" placeholder="Add your Mobile number" /><br />
+      <input type="text" placeholder="Add your Mobile number" id="num" /><br />
       <input type="checkbox" id="check1" /><label for="">Cash on shipment</label
       ><br />
       <input type="checkbox" id="check2" /><label for=""
         >Instant Payment using Card</label
-      >
+      ><br />
+      <hr
+        style="
+          width: 92%;
+          margin-left: 0px;
+          border: 2px solid rgb(255, 175, 188);
+        "
+      />
+      <button>Submit Contact Details</button>
     </div>
   </body>
 </html>
 <script>
+  document.querySelector("#check1").addEventListener("click", function () {
+    window.location.href = "PaymentPage.html";
+  });
   document.querySelector("#check2").addEventListener("click", function () {
     window.location.href = "AddCard.html";
+  });
+</script>
+
+<script>
+  document.querySelector("button").addEventListener("click", function () {
+    let Email = document.querySelector("#email").value;
+    let Add = document.querySelector("#add").value;
+    let Num = document.querySelector("#num").value;
+    let ContactDetails = [Email, Add, Num];
+    localStorage.setItem("ContactDetails", JSON.stringify(ContactDetails));
+    window.location.href="PaymentPage.html";
   });
 </script>
