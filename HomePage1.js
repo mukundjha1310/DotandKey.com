@@ -77,7 +77,7 @@ setInterval(function () {
       btnArray1[j].style.backgroundColor = "white";
     }
   }
-}, 2500);
+}, 2000);
 
 //   <-------------     Redirected pages   ----------->
 
@@ -195,119 +195,83 @@ let careCard3_newPrice = document.querySelector(
 
 let skinCardArray1 = [
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/VITCMOIST.jpg?v=1655302755",
+    Img: "Images/VITCMOIST.png",
     Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
     oldPrice: "595.00",
     newPrice: "499.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/PROBIOTICS.jpg?v=1655302709",
+    Img: "Images/72hr_PROBIOTICS.png",
     Name: "72 HR Hydrating Probiotic Gel Moisturizer For Fa...",
     oldPrice: "745.00",
     newPrice: "596.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/CICANIGHTGEL_3.jpg?v=1655379818",
+    Img: "Images/cicanightgel.png",
     Name: "CICA Niacinamide Night Gel With Green Tea, Tea Tr...",
     oldPrice: "595.00",
     newPrice: "506.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/1-GreenClayListing_1.jpg?v=1649655908",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
+    Img: "Images/Retinol.png",
+    Name: "Retinol & Ceramide Age Defense Night Cream With Hi...",
     oldPrice: "695.00",
     newPrice: "487.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_e423c2c9-3a60-4a5e-9bc0-b0526b7f3c01.jpg?v=1655302612",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
-    oldPrice: "945.00",
-    newPrice: "662.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/LIPMASK.jpg?v=1655311025",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
-    oldPrice: "445.00",
-    newPrice: "356.00",
-  },
+  }
 ];
 
 let skinCardArray2 = [
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/PROBIOTICS.jpg?v=1655302709",
+    Img: "Images/72hr_PROBIOTICS.png",
     Name: "72 HR Hydrating Probiotic Gel Moisturizer For Fa...",
     oldPrice: "745.00",
     newPrice: "596.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/CICANIGHTGEL_3.jpg?v=1655379818",
+    Img: "Images/cicanightgel.png",
     Name: "CICA Niacinamide Night Gel With Green Tea, Tea Tr...",
     oldPrice: "595.00",
     newPrice: "506.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/1-GreenClayListing_1.jpg?v=1649655908",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
+    Img: "Images/Retinol.png",
+    Name: "Retinol & Ceramide Age Defense Night Cream With Hi...",
     oldPrice: "695.00",
     newPrice: "487.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_e423c2c9-3a60-4a5e-9bc0-b0526b7f3c01.jpg?v=1655302612",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
-    oldPrice: "945.00",
-    newPrice: "662.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/LIPMASK.jpg?v=1655311025",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
-    oldPrice: "445.00",
-    newPrice: "356.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/VITCMOIST.jpg?v=1655302755",
+    Img: "Images/VITCMOIST.png",
     Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
     oldPrice: "595.00",
     newPrice: "499.00",
-  },
+  }
 ];
 
 let skinCardArray3 = [
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/CICANIGHTGEL_3.jpg?v=1655379818",
+    Img: "Images/cicanightgel.png",
     Name: "CICA Niacinamide Night Gel With Green Tea, Tea Tr...",
     oldPrice: "595.00",
     newPrice: "506.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/1-GreenClayListing_1.jpg?v=1649655908",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
+    Img: "Images/Retinol.png",
+    Name: "Retinol & Ceramide Age Defense Night Cream With Hi...",
     oldPrice: "695.00",
     newPrice: "487.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1_e423c2c9-3a60-4a5e-9bc0-b0526b7f3c01.jpg?v=1655302612",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
-    oldPrice: "945.00",
-    newPrice: "662.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/LIPMASK.jpg?v=1655311025",
-    Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
-    oldPrice: "445.00",
-    newPrice: "356.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/VITCMOIST.jpg?v=1655302755",
+    Img: "Images/VITCMOIST.png",
     Name: "Vitamin C Moisturizer With Kakadu Plum & Vitamin E",
     oldPrice: "595.00",
     newPrice: "499.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/PROBIOTICS.jpg?v=1655302709",
+    Img: "Images/72hr_PROBIOTICS.png",
     Name: "72 HR Hydrating Probiotic Gel Moisturizer For Fa...",
     oldPrice: "745.00",
     newPrice: "596.00",
-  },
+  }
 ];
 
 let careCardPlace1 = 0;
@@ -462,99 +426,81 @@ let newArriCard3_newPrice = document.querySelector(
 
 let newArriArray1 = [
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/prbox.jpg?v=1655304058",
+    Img: "Images/birthday.png",
     Name: "Big Birthday Special Skincare Kit",
     oldPrice: "2699.00",
     newPrice: "1999.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/CICASUNSCREEN.jpg?v=1655303963",
+    Img: "Images/cicasunscreen.png",
     Name: "Cica + Niacinamide Face Sunscreen SPF 50 PA+++",
     oldPrice: "595.00",
     newPrice: "494.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/20_VITC.jpg?v=1655379925",
+    Img: "Images/20VITC_Serum.png",
     Name: "20% Vitamin C Serum with Blood Orange",
     oldPrice: "665.00",
     newPrice: "532.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/WATERTONER.jpg?v=1655304005",
+    Img: "Images/watermelonSerum.png",
     Name: "Watermelon Skin Glow Face Toner With Glycolic + Lactic",
     oldPrice: "395.00",
     newPrice: "316.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/ACNEBUSTING_720x.jpg?v=1655370921",
-    Name: "2% Salicylic Face Serum With Tea Tree Oil & Zinc",
-    oldPrice: "655.00",
-    newPrice: "499.00",
-  },
+  }
 ];
 let newArriArray2 = [
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/CICASUNSCREEN.jpg?v=1655303963",
+    Img: "Images/cicasunscreen.png",
     Name: "Cica + Niacinamide Face Sunscreen SPF 50 PA+++",
     oldPrice: "595.00",
     newPrice: "494.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/20_VITC.jpg?v=1655379925",
+    Img: "Images/20VITC_Serum.png",
     Name: "20% Vitamin C Serum with Blood Orange",
     oldPrice: "665.00",
     newPrice: "532.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/WATERTONER.jpg?v=1655304005",
+    Img: "Images/watermelonSerum.png",
     Name: "Watermelon Skin Glow Face Toner With Glycolic + Lactic",
     oldPrice: "395.00",
     newPrice: "316.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/ACNEBUSTING_720x.jpg?v=1655370921",
-    Name: "2% Salicylic Face Serum With Tea Tree Oil & Zinc",
-    oldPrice: "655.00",
-    newPrice: "499.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/prbox.jpg?v=1655304058",
+    Img: "Images/birthday.png",
     Name: "Big Birthday Special Skincare Kit",
     oldPrice: "2699.00",
     newPrice: "1999.00",
-  },
+  }
 ];
 let newArriArray3 = [
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/20_VITC.jpg?v=1655379925",
+    Img: "Images/20VITC_Serum.png",
     Name: "20% Vitamin C Serum with Blood Orange",
     oldPrice: "665.00",
     newPrice: "532.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/WATERTONER.jpg?v=1655304005",
+    Img: "Images/watermelonSerum.png",
     Name: "Watermelon Skin Glow Face Toner With Glycolic + Lactic",
     oldPrice: "395.00",
     newPrice: "316.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/ACNEBUSTING_720x.jpg?v=1655370921",
-    Name: "2% Salicylic Face Serum With Tea Tree Oil & Zinc",
-    oldPrice: "655.00",
-    newPrice: "499.00",
-  },
-  {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/prbox.jpg?v=1655304058",
+    Img: "Images/birthday.png",
     Name: "Big Birthday Special Skincare Kit",
     oldPrice: "2699.00",
     newPrice: "1999.00",
   },
   {
-    Img: "https://cdn.shopify.com/s/files/1/0361/8553/8692/products/CICASUNSCREEN.jpg?v=1655303963",
+    Img: "Images/cicasunscreen.png",
     Name: "Cica + Niacinamide Face Sunscreen SPF 50 PA+++",
     oldPrice: "595.00",
     newPrice: "494.00",
-  },
+  }
 ];
 
 let newArriCardPlace1 = 0;

@@ -77,7 +77,7 @@
       <h4>Shipping: Free</h4>
       <hr />
       <h3>Total: ₹<span></span></h3>
-      <button>Proceed to Pay</button>
+      <button>Place Order</button>
     </div>
   </body>
 </html>
@@ -109,7 +109,7 @@
   document
     .querySelector("#subtotal>button:last-child")
     .addEventListener("click", function () {
-      alert("Payment is Sccessful and Your Order is Placed");
+      alert("Your Order is Placed");
       localStorage.setItem("cartData", JSON.stringify(emptyCart));
       window.location.href = "index.html";
     });

@@ -61,15 +61,26 @@
       />
       <h1>Add Contact Details</h1>
       <label for="">Email Address</label><br />
-      <input type="email" placeholder="Add your Email" id="email" /><br />
+      <input
+        type="email"
+        placeholder="Add your Email"
+        id="email"
+        required
+      /><br />
       <label for="">Address</label><br />
       <input
         type="text"
         placeholder="Add your Shipping Address"
         id="add"
+        required
       /><br />
       <label for="">Mobile Number</label><br />
-      <input type="text" placeholder="Add your Mobile number" id="num" /><br />
+      <input
+        type="text"
+        placeholder="Add your Mobile number"
+        id="num"
+        required
+      /><br />
       <input type="checkbox" id="check1" /><label for="">Cash on shipment</label
       ><br />
       <input type="checkbox" id="check2" /><label for=""
@@ -102,6 +113,6 @@
     let Num = document.querySelector("#num").value;
     let ContactDetails = [Email, Add, Num];
     localStorage.setItem("ContactDetails", JSON.stringify(ContactDetails));
-    window.location.href="PaymentPage.html";
+    window.location.href = "PaymentPage.html";
   });
 </script>

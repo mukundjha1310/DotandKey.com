@@ -72,7 +72,7 @@ body {
 #slidBtn1 {
   width: 15%;
   margin: auto;
-  margin-top: -5px;
+  margin-top: 5px;
   text-align: center;
 }
 #slidBtn1 > button {
@@ -126,7 +126,7 @@ body {
 #slidBtn2 {
   width: 15%;
   margin: auto;
-  margin-top: -5px;
+  margin-top: 5px;
   text-align: center;
 }
 #slidBtn2 > button {
