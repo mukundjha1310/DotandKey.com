@@ -12,7 +12,7 @@
         display: grid;
         justify-content: center;
         align-items: center;
-        margin-top: 10%;
+        margin-top: 1%;
         padding: 50px 0px 50px 0px;
       }
       #login label {
@@ -84,11 +84,14 @@
         display: flex;
         justify-content: space-evenly;
       }
+      #login > form > p > a > span {
+        color: rgb(0, 119, 255);
+      }
       #ffacebook,
       #ggoogle {
         display: flex;
         justify-content: space-between;
-
+        border-radius: 8px;
         background-color: rgb(20, 121, 189);
         height: auto;
         width: 100%;
@@ -330,7 +333,11 @@
 
         <input id="pass" type="password" /><br />
         <input id="btn" type="submit" value="Sign in" /><br />
-        <p><a href="signup.html">Don't have an account? Sign up here.</a></p>
+        <p>
+          <a href="signup.html"
+            >Don't have an account? <span>Sign Up</span> here.</a
+          >
+        </p>
       </form>
     </div>
     <div id="mainproject">
